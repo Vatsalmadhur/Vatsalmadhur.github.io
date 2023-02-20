@@ -8,10 +8,11 @@ function CamOrbitControls() {
   
     const { camera, gl } = useThree();
     const reqRef = useRef();
+    const controls = new OrbitControls(camera, gl.domElement);
     const animate = ()=>{
       controls.enableDamping = true;
       controls.enablePan = false;
-      controls.enableZoom = false;
+      controls.enableZoom="false"
       controls.autoRotate = true;
       controls.autoRotateSpeed = 5;
       controls.update();
@@ -19,7 +20,6 @@ function CamOrbitControls() {
       reqRef.current = requestAnimationFrame(animate);
     }
   
-    const controls = new OrbitControls(camera, gl.domElement);
     useEffect(() => {
       reqRef.current = requestAnimationFrame(animate);
       

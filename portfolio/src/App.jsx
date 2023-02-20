@@ -12,7 +12,7 @@ function App() {
     <Canvas className="canvas" camera={{ position: [0, 0, 5] }}>
       <CamOrbitControls />
       <Box />
-      <Random/>
+      {/* <Random/> */}
       
     </Canvas>
   );

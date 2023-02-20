@@ -4,6 +4,11 @@ import { useThree } from "@react-three/fiber";
 import { PointsMaterial } from "three";
 import { BufferGeometry } from "three";
 import { BufferAttribute } from "three";
+// import { TextureLoader } from "three";
+// import star from './star.png'
+
+// const loader =new TextureLoader();
+// const starImg=loader.load({star});
 
 function Random() {
   // let i=0;
@@ -17,7 +22,7 @@ function Random() {
 
   // }
   for (var i = 0; i < partCount; i++) {
-    posArray[i] = Math.random();
+    posArray[i] = (Math.random()-0.5) *10;
     console.log("hello");
   }
 //   particleGeo.addAttribute("position", posArray, 3);
@@ -29,7 +34,10 @@ function Random() {
     <points>
     
       <primitive attach="geometry" object={particleGeo} />
-      <pointsMaterial size={1} color="blue" />
+      <pointsMaterial size={0.01} color="pink"
+      //  map={starImg} 
+      //  transparent="true"
+         />
     </points>
     // </>
   );
