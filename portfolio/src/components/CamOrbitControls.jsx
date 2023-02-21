@@ -12,11 +12,14 @@ function CamOrbitControls() {
     const animate = ()=>{
       controls.enableDamping = true;
       controls.enablePan = false;
-      controls.enableZoom="false"
-      controls.autoRotate = true;
+      // console.log(controls)
+      controls.enableZoom=false
+      controls.autoRotate = true
       controls.autoRotateSpeed = 5;
+      controls.minDistance=0
+      controls.maxDistance=5
+      // console.log("hgewjhgas")
       controls.update();
-      console.log("hgewjhgas")
       reqRef.current = requestAnimationFrame(animate);
     }
   
