@@ -42,7 +42,7 @@ const time = new Clock();
 const Tick =()=>{
 
   const elapsedTime = time.getElapsedTime();
-  console.log(mouseY)
+  // console.log(mouseY)
   point.rotateY= mouseY *elapsedTime
   requestAnimationFrame(Tick)
 }

@@ -1,36 +1,24 @@
 import React from "react";
-import { Canvas } from "@react-three/fiber";
 import "./App.css";
-import Box from "./components/Box";
-import CamOrbitControls from "./components/CamOrbitControls";
-import Random from "./components/Random";
-import Name from "./components/Name/Name.jsx";
-// import { useRef } from "react";
+import { Route ,Routes } from "react-router-dom";
+
+import Home from './components/Home/Home.jsx'
+import About from "./components/About/about";
+import Project from "./components/Projects/project";
+import Contact from "./components/Contact/contact";
 
 function App() {
-  // const body=useRef();
-  // const animation=()=>{
-  //   console.log("animate")
-  //   body.height=window.innerHeight;
-  //   body.width=window.innerWidth;
-  //   requestAnimationFrame(animation);
-  // }
-  // animation()
+
 
   return (
     <>
-      <div className="boxOfCanvas" >
-        <Name />
-      <Canvas
-        className="canvas"
-        camera={{ position: [0, 0, 5] }}
-      >
-        <Random />
-        <CamOrbitControls/> 
-        <Box/>
-        
-      </Canvas>
-      </div>
+    <Routes>
+    <Route exact path="/" element={<Home/>}/>
+    <Route exact path='/about' element={<About/>}/>
+    <Route exact path='/project' element={<Project/>}/>
+    <Route exact path='/contact' element={<Contact/>}/>
+    </Routes>
+       
       
     </>
   );

@@ -22,6 +22,7 @@ function Name() {
       {
         duration: 2,
         clipPath: "polygon(0 2%, 100% 1%, 100% 100%, 0% 100%)",
+        y:20
       },
       "-=2"
     );
@@ -42,7 +43,7 @@ function Name() {
     <div className="container">
       <div id="content">
         <p className="head1" ref={h1ref}>
-          Madhur Vatsal
+          Madhur <br/> Vatsal
         </p>
         <div className="box">
           <p className="head2" ref={h2ref}>
