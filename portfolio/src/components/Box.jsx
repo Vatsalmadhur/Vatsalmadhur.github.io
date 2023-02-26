@@ -9,7 +9,7 @@ function Box() {
 
       <points >
         <torusGeometry args={[2, 0.5, 16, 100]} />
-        <pointsMaterial size={0.01} color={"white"} />
+        <pointsMaterial size={0.01} color={"#ff6f1d"} />
       </points>
     </>
   );

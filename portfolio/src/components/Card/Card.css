@@ -1,0 +1,24 @@
+.cardBody{
+    height: 350px;
+    width: 250px;
+    border: 1px solid white;
+    border-radius: 2px;
+    margin: 20px;
+    background-color: cornsilk;
+
+}
+.cardImg{
+    width: 250px;
+    height: 200px;
+    /* border: 2px solid green; */
+}
+.cardAbt1{
+    font-size: 2rem;
+    font-weight: 600;
+    padding-left: 10px;
+    color: var(--orange);
+}
+.cardAbt2{
+    font-size: 1rem;
+    padding-left: 10px;
+}

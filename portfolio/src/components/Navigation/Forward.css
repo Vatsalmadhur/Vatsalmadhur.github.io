@@ -1,0 +1,20 @@
+.homeRight{
+    height: 50px;
+    width: 50px;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    /* border: 2px solid red; */
+    z-index: 1;
+    /* background-color: aqua; */
+    position: absolute;
+    /* top: 50%; */
+    bottom: 45%;
+    right: 5%;
+}
+@media  screen and (max-width:930px) {
+    .homeRight{
+        position: absolute;
+        bottom: 10%;
+        right: 45%;
+    }
+    
+}

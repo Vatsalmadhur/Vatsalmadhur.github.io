@@ -1,10 +1,10 @@
 import React from "react";
 import { useRef } from "react";
-import { useThree } from "@react-three/fiber";
-import { Points, PointsMaterial } from "three";
+// import { useThree } from "@react-three/fiber";
+// import { Points, PointsMaterial } from "three";
 import { BufferGeometry } from "three";
 import { BufferAttribute } from "three";
-import CamOrbitControls from "./CamOrbitControls";
+// import CamOrbitControls from "./CamOrbitControls";
 import { Clock } from "three";
 
 
@@ -13,7 +13,7 @@ function Random() {
   const point = useRef();
   console.log(point)
   const particleGeo = new BufferGeometry();
-  const partCount = 5000;
+  const partCount = 10000;
   const posArray = new Float32Array(partCount * 3);
 
   for (var i = 0; i < partCount; i++) {

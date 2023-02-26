@@ -1,0 +1,52 @@
+.boxForAbt {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  /* flex-wrap: wrap; */
+  background-color: #21282a;
+  /* background-color: black; */
+}
+.head_abt_1 {
+  height:auto;
+  width: 800px;
+  z-index: 1;
+  /* border: 2px solid red; */
+}
+.abtText1 {
+  font-size:min(6rem,20vw);
+  color: var(--orange);
+  text-align: center;
+  font-family: "Gloock", serif;
+}
+.head_abt_2 {
+  height: 800px;
+  width: min(800px,100%);
+  /* position: absolute; */
+  /* border: 2px solid red; */
+  /* background-color: black; */
+}
+@media screen and (max-width:1000px) {
+  .head_abt_2 {
+    position: absolute;
+  }
+  
+}
+.abtText2 {
+  font-size: 1rem;
+  color: white;
+  text-align: center;
+  font-family: "Gloock", serif;
+}
+
+.subHeadCanvas {
+  text-align: center;
+  color: white;
+}
+@media screen and (max-width:1000px) {
+  .subHeadCanvas {
+    display: none;
+  }
+  
+}
