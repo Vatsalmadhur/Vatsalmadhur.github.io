@@ -7,6 +7,7 @@ import { useRef } from "react";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import Sphere from "../Sphere/Sphere.jsx";
 import Forward from "../Navigation/Forward";
+import Navbar from "../Navbar/Navbar";
 
 function CCB() {
   const { camera, gl } = useThree();
@@ -37,6 +38,7 @@ function CCB() {
 function About() {
   return (
     <>
+    <Navbar/>
       <div className="boxForAbt">
         <div className="head_abt_1">
           <p className="abtText1">About Me!</p>

@@ -2,10 +2,13 @@ import React from "react";
 import "./Project.css";
 import Button from "../Button/Button";
 import Card from "../Card/Card";
+import Navbar from "../Navbar/Navbar";
+
 
 function project() {
   return (
     <>
+    <Navbar/>
     <div className="bodyOfProject">
       <div className="mainOfProject">
         <div className="leftProject">
