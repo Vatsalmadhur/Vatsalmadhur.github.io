@@ -8,7 +8,7 @@
     position: absolute;
     /* top: 50%; */
     bottom: 45%;
-    right: 5%;
+    right: 2%;
 }
 @media  screen and (max-width:930px) {
     .homeRight{

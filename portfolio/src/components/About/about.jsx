@@ -69,7 +69,7 @@ function About() {
           <p className="subHeadCanvas">Bored reading? Give me a spin instead!</p>
         </div>
       </div>
-      <Forward to={'./project'}/>
+      <Forward to={'/project'}/>
     </>
   );
 }
