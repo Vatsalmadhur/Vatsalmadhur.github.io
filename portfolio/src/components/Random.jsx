@@ -49,6 +49,18 @@ const Tick =()=>{
 Tick();
 
 
+
+
+
+
+// function createParticleSystems() {
+//   // Load the texture that will be used to display our snow
+//   const textureLoader = new THREE.TextureLoader();
+
+//   const sprite1 = textureLoader.load(
+//     "./snowflake1.png"
+//   );
+
   return (
     // <>
     <points ref={point}  >
