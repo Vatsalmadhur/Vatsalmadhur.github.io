@@ -12,11 +12,6 @@ import {gsap} from "gsap"
 
 function CCB() {
   const { camera, gl } = useThree();
-  
-
-
-
-
   const reqRef = useRef();
   const animate = () => {
     controls.enableDamping = true;

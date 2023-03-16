@@ -59,7 +59,7 @@ useEffect(()=>{
     opacity:0
 
   })
-  .from(card3,2,{
+  tl.from(card3,2,{
     scale:1.6,
     ease:ease,
   },"-=1")

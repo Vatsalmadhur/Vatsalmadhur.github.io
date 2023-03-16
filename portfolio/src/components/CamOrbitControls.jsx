@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import { useRef } from "react";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 
-function CamOrbitControls() {
+function CamOrbitControls(props) {
   
     const { camera, gl } = useThree();
     const reqRef = useRef();
@@ -15,7 +15,7 @@ function CamOrbitControls() {
       // console.log(controls)
       controls.enableZoom=false
       controls.autoRotate = true
-      controls.autoRotateSpeed = 5;
+      controls.autoRotateSpeed = 5
       controls.minDistance=0
       controls.maxDistance=5
       // console.log("hgewjhgas")
