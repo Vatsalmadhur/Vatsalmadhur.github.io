@@ -2,8 +2,9 @@ import React from "react";
 import { useRef } from "react";
 // import { useThree } from "@react-three/fiber";
 // import { Points, PointsMaterial } from "three";
-import { BufferGeometry } from "three";
+import { BufferGeometry, Sphere } from "three";
 import { BufferAttribute } from "three";
+import { SphereGeometry } from "three";
 // import CamOrbitControls from "./CamOrbitControls";
 import { Clock } from "three";
 
@@ -63,7 +64,7 @@ Tick();
 
   return (
     // <>
-    <points ref={point}  >
+    <points ref={point} >
     
       <primitive attach="geometry" object={particleGeo} />
       <pointsMaterial

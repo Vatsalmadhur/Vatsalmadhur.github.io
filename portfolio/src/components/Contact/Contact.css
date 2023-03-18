@@ -6,6 +6,7 @@
     align-items: center;
     justify-content: start;
     flex-wrap: wrap-reverse;
+    background-color: var(--grey);
 
 }
 .canvasDivOfContact{
@@ -29,4 +30,5 @@
     font-size: 1rem;
     font-family: 'Gloock', serif;
     margin-bottom: 50px;
+    color:white
 }

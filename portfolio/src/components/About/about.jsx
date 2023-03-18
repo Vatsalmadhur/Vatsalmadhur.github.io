@@ -62,7 +62,7 @@ const tl= new gsap.timeline();
     <>
       <Navbar />
       <div className="boxForAbt">
-        <div className="head_abt_1" timeline={tl} >
+        <div className="head_abt_1"  >
           <p className="abtText1" ref={el=>abtH=el} >About Me!</p>
           <p className="abtText2" ref={el=>abtB=el}>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo
