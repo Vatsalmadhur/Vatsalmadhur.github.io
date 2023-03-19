@@ -1,13 +1,45 @@
 import React, { useEffect, useRef } from "react";
 import { Canvas } from "@react-three/fiber";
 import { useGLTF } from "@react-three/drei";
-import CamOrbitControls from "../CamOrbitControls";
 import "./Contact.css";
 import Navbar from "../Navbar/Navbar";
 import gsap from "gsap";
+import {useThree} from '@react-three/fiber'
+import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
+
+
+
+
+export function CamOrbitControls(props) {
+  
+  const { camera, gl } = useThree();
+  const reqRef = useRef();
+  const controls = new OrbitControls(camera, gl.domElement);
+  const animate = ()=>{
+    controls.enableDamping = true;
+    controls.enablePan = false;
+    // console.log(controls)
+    controls.enableZoom=false
+    controls.autoRotate = true
+    controls.autoRotateSpeed = 5
+    controls.minDistance=12
+    controls.maxDistance=5
+    // console.log("hgewjhgas")
+    controls.update();
+    reqRef.current = requestAnimationFrame(animate);
+  }
+
+  useEffect(() => {
+    reqRef.current = requestAnimationFrame(animate);
+    
+    return () => {
+      controls.dispose();
+    };
+  }, [camera, gl]);
+}
 
 function contact(props) {
-  const { nodes, materials } = useGLTF("/phone.gltf");
+  const { nodes, materials } = useGLTF("/phone2.gltf");
   const tl=new gsap.timeline();
   let contH1 = useRef(null);
   let contH2 = useRef(null);
@@ -39,95 +71,66 @@ function contact(props) {
           </div>
         </div>
         <div className="canvasDivOfContact">
-          <Canvas camera={{ position: [10, 1, 0] }}>
-            <ambientLight intensity={2} />
+          <Canvas>
+            <ambientLight intensity={1} />
+            <pointLight color={"#ff6f1d"} intensity={5}/>
+            <directionalLight intensity={0.6} position={[0,1,1]} color={"white"}/>
             <CamOrbitControls />
 
             <group {...props} dispose={null}>
-              <mesh>
-                <mesh
-                  castShadow
-                  receiveShadow
-                  geometry={nodes.Plane.geometry}
-                  material={nodes.Plane.material}
-                  rotation={[0, 0, -Math.PI / 2]}
-                  scale={[1.91, 1.11, 1.01]}
-                />
-                <mesh
-                  castShadow
-                  receiveShadow
-                  geometry={nodes.Cube.geometry}
-                  material={nodes.Cube.material}
-                  position={[0.1, 1.69, 0.75]}
-                  scale={[0.05, 0.06, 0.12]}
-                />
-                <mesh
-                  castShadow
-                  receiveShadow
-                  geometry={nodes.Sphere.geometry}
-                  material={nodes.Sphere.material}
-                  position={[0.14, 1.69, 0.81]}
-                  scale={0.03}
-                />
-                <mesh
-                  castShadow
-                  receiveShadow
-                  geometry={nodes.Sphere001.geometry}
-                  material={nodes.Sphere001.material}
-                  position={[0.14, 1.69, 0.69]}
-                  scale={0.03}
-                />
-                <mesh
-                  castShadow
-                  receiveShadow
-                  geometry={nodes.Plane002.geometry}
-                  material={nodes.Plane002.material}
-                  position={[0.1, 1.24, -0.6]}
-                  rotation={[0, 0, -Math.PI / 2]}
-                  scale={[0.44, 0.28, 0.16]}
-                />
-                <mesh
-                  castShadow
-                  receiveShadow
-                  geometry={nodes.Sphere002.geometry}
-                  material={nodes.Sphere002.material}
-                  position={[0, 1.54, -0.6]}
-                  scale={-0.06}
-                />
-                <mesh
-                  castShadow
-                  receiveShadow
-                  geometry={nodes.Sphere003.geometry}
-                  material={nodes.Sphere003.material}
-                  position={[0, 1.34, -0.6]}
-                  scale={-0.06}
-                />
-                <mesh
-                  castShadow
-                  receiveShadow
-                  geometry={nodes.Sphere004.geometry}
-                  material={nodes.Sphere004.material}
-                  position={[0, 1.14, -0.6]}
-                  scale={-0.06}
-                />
-                <mesh
-                  castShadow
-                  receiveShadow
-                  geometry={nodes.Sphere005.geometry}
-                  material={nodes.Sphere005.material}
-                  position={[0, 0.93, -0.6]}
-                  scale={-0.06}
-                />
-                <mesh
-                  castShadow
-                  receiveShadow
-                  geometry={nodes.Plane001.geometry}
-                  material={materials["Material.001"]}
-                  rotation={[0, 0, -Math.PI / 2]}
-                  scale={[1.91, 1.11, 1.01]}
-                />
-              </mesh>
-            </group>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Plane.geometry}
+        material={nodes.Plane.material}
+        rotation={[0, 0, -Math.PI / 2]}
+        scale={[5.96, 1, 2.88]}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Plane002.geometry}
+        material={nodes.Plane002.material}
+        position={[0.49, 5.6, -0.03]}
+        rotation={[0, 0, Math.PI / 2]}
+        scale={[0.23, 0.93, 1.25]}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Plane003.geometry}
+        material={nodes.Plane003.material}
+        position={[0.19, 0.72, -2.66]}
+        rotation={[0, 0, -Math.PI / 2]}
+        scale={[0.5, 0.2, 0.26]}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Plane004.geometry}
+        material={nodes.Plane004.material}
+        position={[0.2, 2.92, 2.82]}
+        rotation={[0, 0, -Math.PI / 2]}
+        scale={[0.26, 0.14, 0.14]}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Plane005.geometry}
+        material={nodes.Plane005.material}
+        position={[0.2, 2.23, 2.82]}
+        rotation={[0, 0, -Math.PI / 2]}
+        scale={[0.26, 0.14, 0.14]}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Plane001.geometry}
+        material={materials.Material}
+        rotation={[0, 0, -Math.PI / 2]}
+        scale={[5.96, 1, 2.88]}
+      />
+    </group>
           </Canvas>
         </div>
       </div>
@@ -135,5 +138,5 @@ function contact(props) {
   );
 }
 
-useGLTF.preload("/phone.gltf");
+useGLTF.preload("/phone2.gltf");
 export default contact;
