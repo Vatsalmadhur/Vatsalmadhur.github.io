@@ -4,9 +4,11 @@ import { useRef } from "react";
 // import { Points, PointsMaterial } from "three";
 import { BufferGeometry, Sphere } from "three";
 import { BufferAttribute } from "three";
-import { SphereGeometry } from "three";
+// import { SphereGeometry } from "three";
 // import CamOrbitControls from "./CamOrbitControls";
 import { Clock } from "three";
+import {useLoader} from "react-three-fiber"
+import { TextureLoader } from "three";
 
 
 function Random() {
@@ -14,7 +16,7 @@ function Random() {
   const point = useRef();
   console.log(point)
   const particleGeo = new BufferGeometry();
-  const partCount = 10000;
+  const partCount = 30000;
   const posArray = new Float32Array(partCount * 3);
 
   for (var i = 0; i < partCount; i++) {
@@ -56,11 +58,11 @@ Tick();
 
 // function createParticleSystems() {
 //   // Load the texture that will be used to display our snow
-//   const textureLoader = new THREE.TextureLoader();
+  const textureLoader = useLoader(TextureLoader,'/star1.png');
 
-//   const sprite1 = textureLoader.load(
-//     "./snowflake1.png"
-//   );
+  // const sprite1 = textureLoader.load(
+  //   "./moon.png"
+  // );
 
   return (
     // <>
@@ -68,8 +70,9 @@ Tick();
     
       <primitive attach="geometry" object={particleGeo} />
       <pointsMaterial
-       size={0.01}
+       size={0.02}
         color="white"
+        map={textureLoader}
          />
     </points>
     // </>

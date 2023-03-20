@@ -71,7 +71,7 @@ useEffect(()=>{
       <Navbar />
       <div className="bodyOfProject">
         <div className="mainOfProject">
-          <div timeline={tl} className="leftProject">
+          <div className="leftProject">
             <p className="projTxt1" ref={el=>h1=el} >Projects</p>
             <p className="projTxt2"ref={el=>para=el}>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius quis

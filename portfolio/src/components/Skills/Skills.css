@@ -1,6 +1,7 @@
 .bodyOfSkills{
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    max-width: 100vw;
+    /* max-width: fit-content; */
     /* border: 2px solid pink; */
     display: flex;
     /* align-items: center; */
@@ -10,7 +11,7 @@
 }
 .leftOfSkills{
     height: auto;
-    width: 600px;
+    width: min(800px,100%);
     /* border: 2px solid red; */
 }
 .rightOfSkills{
@@ -22,12 +23,15 @@
     justify-content: center;
 }
 .skillH1{
-    font-size:min(6rem,20vw);
+    /* font-size:min(6rem,20vw); */
+    font-size:min(8rem,20vw);
+    padding: 0 10px;
     font-family: 'Gloock', serif;
     color: var(--orange);
 }
 .skillH2{
     font-size:1rem;
+    padding: 0 10px;
     font-family: 'Gloock', serif;
     color: #fff;
 }
@@ -56,7 +60,8 @@
     
 }
 .skillBox div{
-    font-size:3rem;
+    font-size:min(3rem,4vh);
+    padding: 5px;
    text-align: center;
    width: auto;
    margin: 10px;

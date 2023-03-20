@@ -93,7 +93,7 @@ const tl= new gsap.timeline();
           </p>
         </div>
       </div>
-      <Forward to={"/project"} />
+      {/* <Forward to={"/project"} /> */}
     </>
   );
 }
