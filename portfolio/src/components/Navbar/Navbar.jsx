@@ -1,5 +1,5 @@
 import "./Navbar.css";
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { Drawer, IconButton, List, ListItem, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import MenuIcon from "@mui/icons-material/Menu";
@@ -9,11 +9,26 @@ import CodeIcon from "@mui/icons-material/Code";
 import DataObjectIcon from "@mui/icons-material/DataObject";
 import ContactMailIcon from "@mui/icons-material/ContactMail";
 import { useNavigate } from "react-router-dom";
+import { ThemeProvider, createTheme } from '@mui/material/styles';
 function Navbar() {
   const Navigate = useNavigate();
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+  const theme = createTheme({
+    breakpoints: {
+      values: {
+        xxs: 0, 
+        xs: 300, 
+        sm: 600, 
+        md: 900, 
+        lg: 1200, 
+        xl: 1536 
+      }
+    }
+  });
+
   return (
     <>
+     <ThemeProvider theme={theme}>
       <IconButton
         size="large"
         aria-label="logo"
@@ -28,11 +43,19 @@ function Navbar() {
         onClose={() => setIsDrawerOpen(false)}
       >
         <List sx={{ bgcolor: "#21282a", color: "#ffffff" }}>
-          <Box
+          <Box className="navBox"
             sx={{
               display: "flex",
+              alignItems:"center",
               justifyContent: "space-around",
               flexWrap: "wrap",
+              flexDirection:{
+                xs: "column",
+                sm: "row",
+                md: "row",
+                lg: "row",
+                xl: "row"
+              }
             }}
           >
             <ListItem
@@ -85,6 +108,7 @@ function Navbar() {
           </Box>
         </List>
       </Drawer>
+      </ThemeProvider>
     </>
   );
 }
