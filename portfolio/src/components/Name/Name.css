@@ -1,3 +1,6 @@
+body{
+    background-color: var(--grey);
+}
 .container{
     height: auto;
     width: 90%;
@@ -5,10 +8,9 @@
     align-items: center;
     justify-content: space-around;
     position: absolute;
-    z-index: 1;
+    /* z-index: 1; */
     color: white;
     flex-wrap: wrap;
-    /* border: 2px solid palegreen; */
 }
 #content{
     display: flex;

@@ -15,9 +15,9 @@ function CamOrbitControls(props) {
       // console.log(controls)
       controls.enableZoom=false
       controls.autoRotate = true
-      controls.autoRotateSpeed = 5
+      controls.autoRotateSpeed = 2
       controls.minDistance=0
-      controls.maxDistance=5
+      controls.maxDistance=4
       // console.log("hgewjhgas")
       controls.update();
       reqRef.current = requestAnimationFrame(animate);

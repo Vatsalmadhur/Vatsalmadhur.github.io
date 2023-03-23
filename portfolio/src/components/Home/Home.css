@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
     }
     .boxOfCanvas{
         height: 100vh;
@@ -14,5 +15,6 @@
     .canvas{
         /* height: 100vh;  */
         /* width: 100vw; */
-     background-color:#21282a;
+        /* background-color:var(--grey); */
+        background: transparent;
     }

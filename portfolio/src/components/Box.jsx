@@ -1,6 +1,9 @@
 import React from "react";
+import { TextureLoader } from "three";
+import { useLoader } from "react-three-fiber";
 function Box() {
   // const points = useRef();
+  const textureLoader = useLoader(TextureLoader,'/Ellipse.png');
 
 
   return (
@@ -9,7 +12,7 @@ function Box() {
 
       <points >
         <torusGeometry args={[2, 0.5, 16, 100]} />
-        <pointsMaterial size={0.01} color={"#ff6f1d"}  />
+        <pointsMaterial size={0.01} map={textureLoader}  />
       </points>
     </>
   );

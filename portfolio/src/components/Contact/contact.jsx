@@ -6,6 +6,7 @@ import Navbar from "../Navbar/Navbar";
 import gsap from "gsap";
 import {useThree} from '@react-three/fiber'
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
+import Form from '../Form/Form'
 
 
 
@@ -67,7 +68,8 @@ function contact(props) {
             labore animi possimus!
           </p>
           <div className="bodyOfForm">
-           
+            <Form/>
+            
           </div>
         </div>
         <div className="canvasDivOfContact">

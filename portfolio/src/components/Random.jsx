@@ -58,7 +58,7 @@ Tick();
 
 // function createParticleSystems() {
 //   // Load the texture that will be used to display our snow
-  const textureLoader = useLoader(TextureLoader,'/star1.png');
+  const textureLoader = useLoader(TextureLoader,'/snowflake.png');
 
   // const sprite1 = textureLoader.load(
   //   "./moon.png"
@@ -70,8 +70,8 @@ Tick();
     
       <primitive attach="geometry" object={particleGeo} />
       <pointsMaterial
-       size={0.02}
-        color="white"
+       size={0.015}
+        color="cornSilk"
         map={textureLoader}
          />
     </points>
