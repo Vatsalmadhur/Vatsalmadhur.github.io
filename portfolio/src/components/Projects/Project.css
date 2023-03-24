@@ -43,12 +43,12 @@
 
 
 .projTxt1{
-    font-size:min(8rem,20vw);
+    font-size:min(6rem,20vw);
     font-family: 'Gloock', serif;
     color: var(--orange);
 }
 .projTxt2{
-    font-size: 1rem;
+    font-size: 1.4rem;
     font-family: 'Gloock', serif;
     margin-bottom: 50px;
 }

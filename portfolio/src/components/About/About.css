@@ -36,10 +36,11 @@
   
 }
 .abtText2 {
-  font-size: 1rem;
+  font-size: 1.4rem;
   color: white;
   padding: 0 10px;
   text-align: center;
+  line-height: 150%;
   font-family: "Gloock", serif;
 }
 
@@ -48,6 +49,7 @@
   bottom: 30px;
   text-align: center;
   color: white;
+  font-family: "Gloock", serif;
 }
 @media screen and (max-width:1000px) {
   .subHeadCanvas {

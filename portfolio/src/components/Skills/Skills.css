@@ -23,14 +23,14 @@
     justify-content: center;
 }
 .skillH1{
-    /* font-size:min(6rem,20vw); */
-    font-size:min(8rem,20vw);
+    font-size:min(6rem,20vw);
+    /* font-size:min(8rem,20vw); */
     padding: 0 10px;
     font-family: 'Gloock', serif;
     color: var(--orange);
 }
 .skillH2{
-    font-size:1rem;
+    font-size:1.4rem;
     padding: 0 10px;
     font-family: 'Gloock', serif;
     color: #fff;

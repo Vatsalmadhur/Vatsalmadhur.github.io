@@ -65,18 +65,9 @@ const tl= new gsap.timeline();
         <div className="head_abt_1"  >
           <p className="abtText1" ref={el=>abtH=el} >About Me!</p>
           <p className="abtText2" ref={el=>abtB=el}>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo
-            molestiae nisi autem dolore aut ullam minima vitae, laudantium
-            ducimus a provident rem accusamus, laborum adipisci iure possimus
-            fugit sit deserunt sed delectus fuga? Consequatur provident expedita
-            nulla labore veniam. Amet ipsa, reiciendis temporibus iusto eligendi
-            autem provident tempora fuga ex esse cum iure, vero nemo velit
-            recusandae laudantium eius itaque deserunt qui perferendis sequi
-            molestiae consequuntur. Autem repellat consectetur dolorum sequi sit
-            neque odit dolor consequuntur aspernatur fuga laborum corporis, quod
-            dolorem recusandae reprehenderit sapiente tempora quisquam labore
-            beatae. Quaerat commodi alias eveniet dignissimos? Provident sunt
-            alias obcaecati dicta hic!
+           Hi! I'm Madhur Vatsal Bharti. Nice to meet you! <br />
+           I am a self-taught Web developer, a fast-learner and an aspiring app developer.I passionately combine good design, technology, and innovation in all my projects, which I like to accompany from the first idea to release. <br />
+            I don't like to define myself by the work i've done. I define myself by the work i want to do.
           </p>
         </div>
         <div className="head_abt_2">

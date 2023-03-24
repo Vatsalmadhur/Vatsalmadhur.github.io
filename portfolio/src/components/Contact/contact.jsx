@@ -62,10 +62,8 @@ function contact(props) {
         <div className="leftOfContact" timeline={tl}>
           <p className="contTxt1" ref={el=>contH1=el}>Contact Me</p>
           <p className="contTxt2" ref={el=>contH2=el}>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde enim
-            labore cum illum? Praesentium, illo voluptatum adipisci veritatis
-            quia velit nam pariatur voluptatibus amet, laudantium, minus veniam
-            labore animi possimus!
+            Let's get in touch! <br />
+            Connect with me on my socials or pop me a notification from below!
           </p>
           <div className="bodyOfForm">
             <Form/>

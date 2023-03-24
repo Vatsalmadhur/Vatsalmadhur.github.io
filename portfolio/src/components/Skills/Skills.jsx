@@ -20,7 +20,7 @@ function Skills(){
       
         })
 
-        tl.from([".skill1",".skill2",".skill3",".skill4",".skill5",".skill6",".skill7",".skill8",".skill9",".skill10",".skill11",".skill12",".skill13",".skill14"],{
+        tl.from([".skill1",".skill2",".skill3",".skill4",".skill5",".skill6",".skill7",".skill8",".skill9",".skill10",".skill11",".skill12",".skill13",".skill14",".skill15"],{
             opacity:0,
             y:-1000,
         stagger:{
@@ -38,7 +38,7 @@ function Skills(){
         <div className="bodyOfSkills">
         <div className="leftOfSkills">
             <p className="skillH1" ref={el=>skillH1=el}>Skills</p>
-            <p className="skillH2" ref={el=>skillH2=el}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora recusandae aut asperiores ex pariatur esse sunt fuga sint ratione possimus.</p>
+            <p className="skillH2" ref={el=>skillH2=el}>Not very much,but here are some of the tools&techonologies that i use for building user-interactive and focussed apps for the web,smartphones,tablets and desktops.</p>
         </div>
         <div className="rightOfSkills">
             <div className="skillBox" >
@@ -56,6 +56,7 @@ function Skills(){
                 <div className="skill12">C</div>
                 <div className="skill13">Kotlin</div>
                 <div className="skill14">Android</div>
+                <div className="skill15">Git</div>
 
             </div>
         </div>
