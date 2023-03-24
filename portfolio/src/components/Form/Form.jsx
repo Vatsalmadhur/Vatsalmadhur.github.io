@@ -4,6 +4,23 @@ import gsap from "gsap";
 import { useEffect } from "react";
 
 const Form =()=>{
+  const tl= new gsap.timeline();
+  let inp1=useRef(null);
+  let inp2=useRef(null);
+  let inp3=useRef(null);
+  let formBtn=useRef(null);
+
+    useEffect(()=>{
+      tl.from([inp1,inp2,inp3,formBtn],1,{
+        opacity:0,
+        y:400,
+        // skewY:10,
+        stagger:{
+          amount:0.4
+        }
+    
+      })
+  },[])
   const[state,setState]=useState({
     name: "",
     email: "",
@@ -114,7 +131,7 @@ const Form =()=>{
           type="Text"
           name="name"
           placeholder="Name"
-          // ref={el=>inp1=el}
+          ref={el=>inp1=el}
         />
         { state.nameError && <div className="error">invalid name</div>}
         <input
@@ -124,7 +141,7 @@ const Form =()=>{
           type="email"
           name="email"
           placeholder="Email"
-          // ref={el=>inp2=el}
+          ref={el=>inp2=el}
         />
         { state.emailError && <div className="error">invalid email</div>}
         <div
@@ -133,13 +150,13 @@ const Form =()=>{
           contentEditable="true"
           onInput={ handleChange}
           className="input message"
-          // ref={el=>inp3=el}
+          ref={el=>inp3=el}
         />
         { state.messageError && (
           <div className="error">invalid message</div>
         )}
         <button 
-      //   ref={el=>btn=el} 
+        ref={el=>formBtn=el} 
         className="formBtn" onClick={ submitForm}>
           { state.btnText}
         </button>

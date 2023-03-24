@@ -55,6 +55,13 @@ function Navbar() {
                 md: "row",
                 lg: "row",
                 xl: "row"
+              },
+              height:{
+                xs:300,
+                sm:50,
+                md:50,
+                lg:50,
+                xl:50
               }
             }}
           >
@@ -66,7 +73,7 @@ function Navbar() {
             >
               {/* <HomeIcon /> */}
               <HomeIcon sx={{ color: "#ff6f1d" }} />
-              <Typography ml={1}>Home</Typography>
+              <Typography ml={1}  >Home</Typography>
             </ListItem>
 
             <ListItem

@@ -66,6 +66,6 @@ div[data-placeholder]:not([data-placeholder=""]):empty::before {
   margin-top: 20px;
   background-color: cornsilk;
 }
-.formBtn:hover{
+.formBtn:hover,.formBtn:focus{
   border-color: var(--orange);
 }
