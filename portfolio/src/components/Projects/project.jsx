@@ -4,6 +4,9 @@ import Button from "../Button/Button";
 import Card from "../Card/Card";
 import Navbar from "../Navbar/Navbar";
 import { gsap,Power3 } from "gsap";
+import AdBid from "/AdBid.jpeg"
+import Bin from "/BinLocator.png"
+import Wsafe from "/Wsafe.png"
 
 function project() {
   const tl= new gsap.timeline();
@@ -73,20 +76,20 @@ useEffect(()=>{
           <div className="leftProject">
             <p className="projTxt1" ref={el=>h1=el} >Projects</p>
             <p className="projTxt2"ref={el=>para=el}>
-              Alongside are few of the projects that i've built and worked in. You can see all my projects by clicking below! 
+              Alongside are few of the projects that I've built and worked on. You can see all my projects by clicking below! 
             </p>
            <div ref={el=>button=el}> <Button text={"More"}  /></div>
             
           </div>
           <div className="rightProject"timeline={tl} >
             <div className="card1" ref={el=>card1=el}>
-              <Card />
+              <Card image={Bin} heading={"BINLocator"} subHeading={"An app to find nearest dustbins"} link={"https://github.com/theanuragshukla/undefined-DevHeat-2022"} />
             </div>
             <div className="card2" ref={el=>card2=el} >
-              <Card heading={"AdBid"} subHeading={"The Ad bidding platform built on Web3"} />
+              <Card image={AdBid} heading={"AdBid"} subHeading={"The Ad bidding platform built on Web3"} link={"https://github.com/theanuragshukla/ETHForAll"} />
             </div>
             <div className="card3" ref={el=>card3=el} >
-              <Card />
+              <Card image={Wsafe} heading={"Wsafe"} subHeading={"The safety app for women."} link={"https://github.com/theanuragshukla/women-security"} />
             </div>
             
           </div>

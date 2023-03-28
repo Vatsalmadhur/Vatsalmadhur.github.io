@@ -9,8 +9,19 @@
 }
 .cardImg{
     width: 250px;
-    height: 200px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
     /* border: 2px solid green; */
+}
+.cardImageInner{
+    width: 245px;
+    height: 150px;
+    /* border: 2px solid red; */
+    object-fit: contain;
+    overflow: hidden;
+    text-align: center;
+
 }
 .cardAbt1{
     font-size: 2rem;
@@ -19,6 +30,12 @@
     color: var(--orange);
 }
 .cardAbt2{
-    font-size: 1rem;
+    font-size: 1.4rem;
     padding-left: 10px;
+    color: var(--grey);
+}
+.cardAbt3{
+    font-size: 1 rem;
+    padding-left: 10px;
+    color: var(--grey);
 }
