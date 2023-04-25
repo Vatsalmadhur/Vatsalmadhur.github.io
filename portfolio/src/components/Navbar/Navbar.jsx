@@ -69,18 +69,18 @@ function Navbar() {
               onClick={() => {
                 Navigate("/");
               }}
-              sx={{ width: "100px" }}
+              sx={{ width: "100px",'&:hover':{cursor:"pointer"} }}
             >
               {/* <HomeIcon /> */}
               <HomeIcon sx={{ color: "#ff6f1d" }} />
-              <Typography ml={1}  >Home</Typography>
+              <Typography ml={1}   >Home</Typography>
             </ListItem>
 
             <ListItem
               onClick={() => {
                 Navigate("/about");
               }}
-              sx={{ width: "100px" }}
+              sx={{ width: "100px",'&:hover':{cursor:"pointer"} }}
             >
               <AccountBoxIcon sx={{ color: "#ff6f1d" }} />
               <Typography ml={1}>About</Typography>
@@ -89,7 +89,7 @@ function Navbar() {
               onClick={() => {
                 Navigate("/skills");
               }}
-              sx={{ width: "100px" }}
+              sx={{ width: "100px",'&:hover':{cursor:"pointer"} }}
             >
               <CodeIcon sx={{ color: "#ff6f1d" }} />
               <Typography ml={1}>Skills</Typography>{" "}
@@ -98,7 +98,7 @@ function Navbar() {
               onClick={() => {
                 Navigate("/project");
               }}
-              sx={{ width: "100px" }}
+              sx={{ width: "100px",'&:hover':{cursor:"pointer"} }}
             >
               <DataObjectIcon sx={{ color: "#ff6f1d" }} />
               <Typography ml={1}>Projects</Typography>
@@ -107,7 +107,7 @@ function Navbar() {
               onClick={() => {
                 Navigate("/contact");
               }}
-              sx={{ width: "100px" }}
+              sx={{ width: "100px",'&:hover':{cursor:"pointer"} }}
             >
               <ContactMailIcon sx={{ color: "#ff6f1d" }} />
               <Typography ml={1}>Contact</Typography>

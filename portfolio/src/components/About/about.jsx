@@ -22,7 +22,7 @@ function CCB() {
     controls.minDistance = 13;
     controls.maxDistance = 13;
     controls.update();
-    console.log("hgewjhgas");
+    console.log("Hey Stalker!");
     reqRef.current = requestAnimationFrame(animate);
   };
 
