@@ -8,7 +8,7 @@ import './Card.css'
                 <div className="cardAbt">
                     <p className="cardAbt1">{props.heading}</p>
                     <p className="cardAbt2">{props.subHeading}</p>
-                    <a href={props.link}><p className="cardAbt3">Github</p></a>
+                    <a href={props.link} target="blank"><p className="cardAbt3">Github</p></a>
                 </div>
             </div>
          </>

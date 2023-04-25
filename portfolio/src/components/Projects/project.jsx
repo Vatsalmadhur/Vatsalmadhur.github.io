@@ -83,7 +83,7 @@ useEffect(()=>{
           </div>
           <div className="rightProject"timeline={tl} >
             <div className="card1" ref={el=>card1=el}>
-              <Card image={Bin} heading={"BINLocator"} subHeading={"An app to find nearest dustbins"} link={"https://github.com/theanuragshukla/undefined-DevHeat-2022"} />
+              <Card image={Bin} heading={"BINLocator"} subHeading={"An app to find nearest dustbins"} link={"https://github.com/theanuragshukla/undefined-DevHeat-2022"}  />
             </div>
             <div className="card2" ref={el=>card2=el} >
               <Card image={AdBid} heading={"AdBid"} subHeading={"The Ad bidding platform built on Web3"} link={"https://github.com/theanuragshukla/ETHForAll"} />

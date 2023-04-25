@@ -35,7 +35,12 @@
     color: var(--grey);
 }
 .cardAbt3{
-    font-size: 1 rem;
+    font-size: 1.2rem;
+    margin-top: 1rem;
     padding-left: 10px;
     color: var(--grey);
+    font-weight: 800;
+}
+a{
+    text-decoration: none;
 }
