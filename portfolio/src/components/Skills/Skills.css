@@ -13,7 +13,7 @@
 .leftOfSkills{
     height: auto;
     width: min(800px,100%);
-    /* border: 2px solid red; */
+     /*border: 2px solid red;*/
 }
 .rightOfSkills{
     height: 100vh;
@@ -33,8 +33,11 @@
 .skillH2{
     font-size:1.4rem;
     padding: 0 10px;
-    font-family: 'Gloock', serif;
+    /*font-family: 'Gloock', serif;*/
+    font-family: 'Raleway', sans-serif;
     color: #fff;
+    /*border: 2px solid red;*/
+    /*width: 600px;*/
 }
 .skillBox{
     height: 700px;

@@ -37,8 +37,9 @@
 .contTxt2{
     font-size: 1.4rem;
     padding: 0 10px;
-    font-family: 'Gloock', serif;
-    margin-bottom: 50px;
+    /*font-family: 'Gloock', serif;*/
+    font-family: 'Raleway', sans-serif;
+    margin: 30px 0;
     color:white
 }
 .bodyOfForm{
@@ -53,10 +54,11 @@ button {
     padding: 0.6em 1.2em;
     font-size: 1em;
     font-weight: 500;
-    font-family: inherit;
+    /*font-family: inherit;*/
     background-color: #1a1a1a;
     cursor: pointer;
     transition: border-color 0.25s;
+    font-family: 'Raleway', sans-serif;
   }
   button:hover {
     border-color: #646cff;
