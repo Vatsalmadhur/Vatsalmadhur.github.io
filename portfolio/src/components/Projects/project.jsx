@@ -6,7 +6,7 @@ import Navbar from "../Navbar/Navbar";
 import { gsap,Power3 } from "gsap";
 import AdBid from "/AdBid.jpeg"
 import Bin from "/BinLocator.png"
-import Wsafe from "/Wsafe.png"
+import yt from "/yt.png"
 
 function project() {
   const tl= new gsap.timeline();
@@ -89,7 +89,7 @@ useEffect(()=>{
               <Card image={AdBid} heading={"AdBid"} subHeading={"The Ad bidding platform built on Web3"} link={"https://github.com/theanuragshukla/ETHForAll"} />
             </div>
             <div className="card3" ref={el=>card3=el} >
-              <Card image={Wsafe} heading={"Wsafe"} subHeading={"The safety app for women."} link={"https://github.com/theanuragshukla/women-security"} />
+              <Card image={yt} heading={"!yt"} subHeading={"The Video streaming app."} link={"https://github.com/Vatsalmadhur/notYouTube"} />
             </div>
             
           </div>

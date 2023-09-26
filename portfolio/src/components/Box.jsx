@@ -12,7 +12,9 @@ function Box() {
 
       <points >
         <torusGeometry args={[2, 0.5, 16, 100]} />
-        <pointsMaterial size={0.01} map={textureLoader}  />
+        <pointsMaterial size={0.01} map={textureLoader} 
+        blending='screen'
+        />
       </points>
     </>
   );

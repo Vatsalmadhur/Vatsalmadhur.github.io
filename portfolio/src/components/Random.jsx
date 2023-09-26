@@ -73,6 +73,7 @@ Tick();
        size={0.015}
         color="cornSilk"
         map={textureLoader}
+        blending='screen'
          />
     </points>
     // </>

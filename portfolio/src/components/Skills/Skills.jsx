@@ -20,7 +20,7 @@ function Skills(){
       
         })
 
-        tl.from([".skill1",".skill2",".skill3",".skill4",".skill5",".skill6",".skill7",".skill8",".skill9",".skill10",".skill11",".skill12",".skill13",".skill14",".skill15"],{
+        tl.from([".skill1",".skill2",".skill3",".skill4",".skill5",".skill6",".skill7",".skill8",".skill9",".skill10",".skill11",".skill12",".skill13",".skill14",".skill15",".skill16",".skill17"],{
             opacity:0,
             y:-1000,
         stagger:{
@@ -57,6 +57,8 @@ function Skills(){
                 <div className="skill13">Kotlin</div>
                 <div className="skill14">Android</div>
                 <div className="skill15">Git</div>
+                <div className="skill16">MantineUI</div>
+                <div className="skill17">NextJs</div>
 
             </div>
         </div>
