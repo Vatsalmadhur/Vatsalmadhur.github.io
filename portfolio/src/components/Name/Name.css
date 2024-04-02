@@ -3,6 +3,7 @@ body{
 }
 .container{
     height: auto;
+    min-height: 450px;
     width: 90%;
     display: flex;
     align-items: center;
@@ -11,6 +12,7 @@ body{
     /* z-index: 1; */
     color: white;
     flex-wrap: wrap;
+    /* border: 2px solid red; */
 }
 #content{
     display: flex;
@@ -46,31 +48,32 @@ body{
     .head1{
         font-size: 5rem;
     }
-    
+
 }
 .head2{
 font-size: 2rem;
 font-family: 'Gloock', serif;
 /* border: 2px solid red; */
-height: 100px;
+height: 200px;
 /* color: rgb(252, 159, 174); */
 color: var(--orange);
+z-index: 10;
 }
 @media screen and (max-width:480px) {
     .head2{
         font-size: 1.5rem;
         margin-top: 30px;
     }
-    
+
 }
 .head1,.head2{
     flex-basis: 0;
     /* flex-grow: 1; */
     clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-} 
+}
 .box{
-    height: 200px;
-    min-height: auto;
+    height: 300px;
+    min-height: 200px;
     display: flex;
     flex-direction: column;
     align-items: center;

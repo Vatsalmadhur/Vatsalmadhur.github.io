@@ -1,13 +1,15 @@
 import React from "react";
 import "./Name.css";
 import { gsap } from "gsap";
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import { useLayoutEffect } from "react";
 import Social from "../social/Social.jsx";
 import { CSSRulePlugin } from "gsap/CSSRulePlugin";
 import RightArrow from '../icons/rightArrow2.png'
 import { Link } from "react-router-dom";
 import Forward from '../Navigation/Forward'
+import SubHeadLarge from "../cwd/SubHeadLarge";
+import SubHeadSmall from '../cwd/SubHeadSmall'
 
 
 
@@ -21,7 +23,7 @@ function Name() {
   console.log(line);
   const tl = gsap.timeline();
   useLayoutEffect(() => {
-    tl.to(line, {duration: 4, cssRule: { scaleX: 1 } });
+    tl.to(line, { duration: 4, cssRule: { scaleX: 1 } });
     tl.to(
       h1ref.current,
       {
@@ -44,24 +46,45 @@ function Name() {
       "-=4";
   }, []);
 
+  const [isDesktop, setIsDesktop] = useState(window.innerWidth > 480);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsDesktop(window.innerWidth > 480);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+
   return (
     <>
-    <div className="container">
-      <div id="content">
-        <p className="head1" ref={h1ref}>
-          Madhur <br /> Vatsal
-        </p>
-        <div className="box">
-          <p className="head2" ref={h2ref}>
-            Creative Web Developer
+      <div className="container">
+        <div id="content">
+          <p className="head1" ref={h1ref}>
+            Madhur <br /> Vatsal
           </p>
-          <Social />
+          <div className="box">
+            <p className="head2" ref={h2ref}>
+              {/* Creative Web Developer */}
+              {isDesktop ? (
+                <SubHeadLarge />
+              ) : (
+                <SubHeadSmall />
+              )}
+
+            </p>
+            <Social />
+          </div>
         </div>
       </div>
-    </div>
-        {/* <Link to={'/about'}><img ref={arrow} className="homeRight" src={RightArrow} alt="" /></Link> */}
-        <Forward to={'/about'}/>
-        </>
+      {/* <Link to={'/about'}><img ref={arrow} className="homeRight" src={RightArrow} alt="" /></Link> */}
+      <Forward to={'/about'} />
+    </>
   );
 }
 export default Name;
