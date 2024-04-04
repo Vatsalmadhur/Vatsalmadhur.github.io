@@ -7,12 +7,13 @@ import gsap from "gsap";
 import {useThree} from '@react-three/fiber'
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import Form from '../Form/Form'
+import Cursor from "../Cursor/Cursor";
 
 
 
 
 export function CamOrbitControls(props) {
-  
+
   const { camera, gl } = useThree();
   const reqRef = useRef();
   const controls = new OrbitControls(camera, gl.domElement);
@@ -32,7 +33,7 @@ export function CamOrbitControls(props) {
 
   useEffect(() => {
     reqRef.current = requestAnimationFrame(animate);
-    
+
     return () => {
       controls.dispose();
     };
@@ -52,12 +53,13 @@ function contact(props) {
         stagger:{
           amount:0.4
         }
-    
+
       }),[]
   })
   return (
     <>
       <Navbar />
+      <Cursor/>
       <div className="mainBoxOfContact">
         <div className="leftOfContact" timeline={tl}>
           <p className="contTxt1" ref={el=>contH1=el}>Contact Me</p>
@@ -67,7 +69,7 @@ function contact(props) {
           </p>
           <div className="bodyOfForm">
             <Form/>
-            
+
           </div>
         </div>
         <div className="canvasDivOfContact">

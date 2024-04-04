@@ -4,6 +4,7 @@ import Navbar from "../Navbar/Navbar"
 import gsap from "gsap";
 import { useRef } from "react";
 import { useEffect } from "react";
+import Cursor from "../Cursor/Cursor";
 function Skills(){
     let skillH1 =useRef(null);
     let skillH2 =useRef(null);
@@ -17,7 +18,7 @@ function Skills(){
           stagger:{
             amount:0.4
           }
-      
+
         })
 
         tl.from([".skill1",".skill2",".skill3",".skill4",".skill5",".skill6",".skill7",".skill8",".skill9",".skill10",".skill11",".skill12",".skill13",".skill14",".skill15",".skill16",".skill17"],{
@@ -26,15 +27,16 @@ function Skills(){
         stagger:{
             amount:6
         }
-        
+
           })
-    
+
       })
 
 
     return(
         <>
         <Navbar/>
+        <Cursor/>
         <div className="bodyOfSkills">
         <div className="leftOfSkills">
             <p className="skillH1" ref={el=>skillH1=el}>Skills</p>
@@ -63,7 +65,7 @@ function Skills(){
             </div>
         </div>
         </div>
-        
+
         </>
 
     )

@@ -9,6 +9,7 @@ import Sphere from "../Sphere/Sphere.jsx";
 import Forward from "../Navigation/Forward";
 import Navbar from "../Navbar/Navbar";
 import { gsap } from "gsap";
+import Cursor from "../Cursor/Cursor";
 
 function CCB() {
   const { camera, gl } = useThree();
@@ -53,6 +54,7 @@ function About() {
   return (
     <>
       <Navbar />
+      <Cursor/>
       <div className="boxForAbt">
         <div className="head_abt_1">
           <p className="abtText1" ref={(el) => (abtH = el)}>

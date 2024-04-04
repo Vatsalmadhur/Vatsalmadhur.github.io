@@ -7,6 +7,7 @@ import { gsap,Power3 } from "gsap";
 import AdBid from "/AdBid.jpeg"
 import Bin from "/BinLocator.png"
 import yt from "/yt.png"
+import Cursor from "../Cursor/Cursor";
 
 function project() {
   const tl= new gsap.timeline();
@@ -71,15 +72,16 @@ useEffect(()=>{
   return (
     <>
       <Navbar />
+      <Cursor/>
       <div className="bodyOfProject">
         <div className="mainOfProject">
           <div className="leftProject">
             <p className="projTxt1" ref={el=>h1=el} >Projects</p>
             <p className="projTxt2"ref={el=>para=el}>
-              Alongside are few of the projects that I've built and worked on. You can see all my projects by clicking below! 
+              Alongside are few of the projects that I've built and worked on. You can see all my projects by clicking below!
             </p>
            <div ref={el=>button=el}> <Button text={"More"}  /></div>
-            
+
           </div>
           <div className="rightProject"timeline={tl} >
             <div className="card1" ref={el=>card1=el}>
@@ -91,7 +93,7 @@ useEffect(()=>{
             <div className="card3" ref={el=>card3=el} >
               <Card image={yt} heading={"!yt"} subHeading={"The Video streaming app."} link={"https://github.com/Vatsalmadhur/notYouTube"} />
             </div>
-            
+
           </div>
         </div>
       </div>

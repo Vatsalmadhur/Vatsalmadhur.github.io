@@ -39,7 +39,7 @@ function Name() {
     }),
       "-=6";
 
-    tl.to(arrow.current, {
+    tl.to(arrow.current, {  
       duration: 1,
       clipPath: "polygon(0 2%, 100% 1%, 100% 100%, 0% 100%)",
     }),
