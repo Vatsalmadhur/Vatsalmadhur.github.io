@@ -36,10 +36,10 @@ function Name() {
     tl.to(h2ref.current, {
       duration: 2,
       clipPath: "polygon(0 2%, 100% 1%, 100% 100%, 0% 100%)",
-    }),
-      "-=6";
+    },'-=2'),
+      // "-=6";
 
-    tl.to(arrow.current, {  
+    tl.to(arrow.current, {
       duration: 1,
       clipPath: "polygon(0 2%, 100% 1%, 100% 100%, 0% 100%)",
     }),

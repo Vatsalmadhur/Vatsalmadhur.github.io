@@ -20,19 +20,36 @@
     .canvasDivOfContact{
         height: 60vh;
     }
-    
+
 }
 .leftOfContact{
     height: 100vh;
     width: 700px;
     /* margin-left: 10px; */
-    /* border: 2px solid green; */
+    /* border: 2px solid green;  */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.leftWrap{
+
 }
 .contTxt1{
-    font-size:min(6rem,20vw);
-    padding: 0 10px;
-    font-family: 'Gloock', serif;
-    color: var(--orange);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 700px;
+    /* border: 2px solid red; */
+    margin-top: 200px;
+    margin-bottom: -200px;
+}
+@media screen and (max-width:700px) {
+    .contTxt1{
+        flex-direction: column ;
+        width: auto;
+       align-items: start;
+    }
+
 }
 .contTxt2{
     font-size: 1.4rem;

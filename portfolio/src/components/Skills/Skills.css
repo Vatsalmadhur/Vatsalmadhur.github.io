@@ -12,8 +12,21 @@
 }
 .leftOfSkills{
     height: auto;
-    width: min(800px,100%);
-     /*border: 2px solid red;*/
+    width: min(700px,100%);
+    /* border: 2px solid red;/ */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.leftWrap{
+    /* display: flex; */
+    /* align-items: center;  */
+    /* justify-content: center; */
+    /* border: 2px solid blue; */
+
+
+
 }
 .rightOfSkills{
     height: 100vh;
@@ -24,11 +37,8 @@
     justify-content: center;
 }
 .skillH1{
-    font-size:min(6rem,20vw);
-    /* font-size:min(8rem,20vw); */
-    padding: 0 10px;
-    font-family: 'Gloock', serif;
-    color: var(--orange);
+    margin-bottom: -200px;
+  margin-top: 200px;
 }
 .skillH2{
     font-size:1.4rem;
@@ -61,7 +71,7 @@
   justify-content: center;
   flex-wrap: wrap;
     }
-    
+
 }
 .skillBox div{
     font-size:min(3rem,4vh);
@@ -76,9 +86,15 @@
 
 }
 .skillBox div:hover{
-    background-color: cornsilk;
-    color: var(--grey);
+    /* background-color: cornsilk; */
+    /* color: cornsilk ; */
     transition: 0.5s;
+    background: rgba( 255, 255, 255, 0.25 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 5px );
+-webkit-backdrop-filter: blur( 5px );
+border-radius: 10px;
+border: 2px solid rgba( 255, 255, 255, 0.18 );
 }
 .skill4{
     grid-column-start: 1;

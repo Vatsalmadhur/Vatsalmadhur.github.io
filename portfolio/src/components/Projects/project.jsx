@@ -8,6 +8,7 @@ import AdBid from "/AdBid.jpeg"
 import Bin from "/BinLocator.png"
 import yt from "/yt.png"
 import Cursor from "../Cursor/Cursor";
+import { Heading } from "../Heading/Heading";
 
 function project() {
   const tl= new gsap.timeline();
@@ -22,10 +23,10 @@ let card2=useRef(null);
 let card3=useRef(null);
 
 useEffect(()=>{
-  tl.from([h1,para,button],1,{
+  tl.from([para,button],1,{
     opacity:0,
-    y:100,
-    skewY:10,
+    x:100,
+    // skewY:10,
     stagger:{
       amount:0.4
     }
@@ -76,11 +77,15 @@ useEffect(()=>{
       <div className="bodyOfProject">
         <div className="mainOfProject">
           <div className="leftProject">
-            <p className="projTxt1" ref={el=>h1=el} >Projects</p>
+            <div className="leftWrap">
+            <div className="projTxt1" ><Heading title="Projects"/></div>
             <p className="projTxt2"ref={el=>para=el}>
-              Alongside are few of the projects that I've built and worked on. You can see all my projects by clicking below!
+              Alongside are few of the projects that I've built and worked on.
+               Each project embodies a commitment to excellence, blending technical expertise with creative innovation. Explore visual representations, providing tangible insights into the depth and quality of my work. These projects stand as testament to my dedication to delivering impactful solutions and exceeding expectations. <br /> You can see all my projects by clicking below!
+
             </p>
            <div ref={el=>button=el}> <Button text={"More"}  /></div>
+           </div>
 
           </div>
           <div className="rightProject"timeline={tl} >

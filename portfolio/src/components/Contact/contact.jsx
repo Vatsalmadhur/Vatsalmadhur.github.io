@@ -8,6 +8,7 @@ import {useThree} from '@react-three/fiber'
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import Form from '../Form/Form'
 import Cursor from "../Cursor/Cursor";
+import { Heading } from "../Heading/Heading";
 
 
 
@@ -46,10 +47,10 @@ function contact(props) {
   let contH1 = useRef(null);
   let contH2 = useRef(null);
   useEffect(()=>{
-    tl.from([contH1,contH2],1,{
+    tl.from([contH2],1,{
         opacity:0,
-        y:100,
-        skewY:10,
+        x:100,
+        // skewY:10,
         stagger:{
           amount:0.4
         }
@@ -62,14 +63,14 @@ function contact(props) {
       <Cursor/>
       <div className="mainBoxOfContact">
         <div className="leftOfContact" timeline={tl}>
-          <p className="contTxt1" ref={el=>contH1=el}>Contact Me</p>
+          <div className="leftWrap">
+          <div className="contTxt1" ><Heading title="Contact"/><Heading title="Me!"/></div>
           <p className="contTxt2" ref={el=>contH2=el}>
-            Let's get in touch! <br />
-            Connect with me on my socials or pop me a notification from below!
+          Thank you for visiting my portfolio! Whether you have questions about my work, want to collaborate on a project, or simply want to say hello, I'd love to hear from you. Please feel free to reach out using the contact form below.
           </p>
           <div className="bodyOfForm">
             <Form/>
-
+          </div>
           </div>
         </div>
         <div className="canvasDivOfContact">

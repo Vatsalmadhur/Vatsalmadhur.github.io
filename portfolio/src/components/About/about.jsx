@@ -10,6 +10,7 @@ import Forward from "../Navigation/Forward";
 import Navbar from "../Navbar/Navbar";
 import { gsap } from "gsap";
 import Cursor from "../Cursor/Cursor";
+import { Heading } from "../Heading/Heading";
 
 function CCB() {
   const { camera, gl } = useThree();
@@ -41,10 +42,10 @@ function About() {
   let abtH = useRef(null);
   let abtB = useRef(null);
   useEffect(() => {
-    tl.from([abtH, abtB], 1, {
+    tl.from([abtB], 1, {
       opacity: 0,
-      y: 100,
-      skewY: 10,
+      x: 100,
+      // skewY: 10,
       stagger: {
         amount: 0.4,
       },
@@ -55,18 +56,12 @@ function About() {
     <>
       <Navbar />
       <Cursor/>
+
       <div className="boxForAbt">
         <div className="head_abt_1">
-          <p className="abtText1" ref={(el) => (abtH = el)}>
-            About Me!
-          </p>
+          <div className="abtText1"><Heading title="About Me!"/></div>
           <p className="abtText2" ref={(el) => (abtB = el)}>
-            Hi! I'm Madhur Vatsal Bharti. Nice to meet you! <br />
-            I am a self-taught Web developer, a fast-learner and an aspiring app
-            developer.I passionately combine good design, technology, and
-            innovation in all my projects, which I like to accompany from the
-            first idea to release. <br />I don't like to define myself by the
-            work i've done. I define myself by the work i want to do.
+          I'm Madhur, a creative fullstack developer dedicated to crafting compelling user experiences. I specialize in frontend development, leveraging my skills to create visually stunning and responsive websites and applications. <br /> Explore my portfolio to see how I can elevate your project with my expertise. Let's collaborate and transform your ideas into remarkable digital experiences!
           </p>
         </div>
         <div className="head_abt_2">

@@ -21,6 +21,8 @@
     color: white;
     padding-left: 10px;
     /* border: 2px solid red; */
+    display: flex;
+    align-items: center;
 
 }
 .rightProject{
@@ -40,7 +42,7 @@
         flex-direction: row;
         height: auto;
     }
-    
+
 }
 
 
@@ -48,6 +50,8 @@
     font-size:min(6rem,20vw);
     font-family: 'Gloock', serif;
     color: var(--orange);
+    margin-bottom: -200px;
+    margin-top: 200px;
 }
 .projTxt2{
     font-size: 1.4rem;
