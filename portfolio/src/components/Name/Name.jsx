@@ -69,16 +69,17 @@ function Name() {
             Madhur <br /> Vatsal
           </p>
           <div className="box">
-            <p className="head2" ref={h2ref}>
+            <div className="head2" ref={h2ref}>
               {/* Creative Web Developer */}
               {isDesktop ? (
                 <SubHeadLarge />
               ) : (
                 <SubHeadSmall />
               )}
-
-            </p>
+            </div>
+            <div>
             <Social />
+            </div>
           </div>
         </div>
       </div>
