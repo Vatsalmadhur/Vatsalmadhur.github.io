@@ -35,7 +35,7 @@ body{
     transform: scaleX(0);
 }
 .box{
-    height: 320px;
+    height: 350px;
     /* min-height: 200px; */
     display: flex;
     flex-direction: column;
