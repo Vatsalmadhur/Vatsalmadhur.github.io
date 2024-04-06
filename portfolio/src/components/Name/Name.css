@@ -44,6 +44,11 @@ body{
     flex-wrap: wrap;
     /* border: 2px solid blue; */
 }
+@media screen and (max-width:400px) {
+    .box{
+        height: 250px;
+    }
+}
 .head1{
     font-size: 8rem;
     color: #fff8dc;
@@ -73,6 +78,7 @@ z-index: 10;
     .head2{
         font-size: 1.5rem;
         margin-top: 30px;
+        height: 100px;
     }
 
 }
