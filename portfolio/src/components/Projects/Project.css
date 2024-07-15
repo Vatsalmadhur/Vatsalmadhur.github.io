@@ -41,6 +41,8 @@
     .rightProject{
         flex-direction: row;
         height: auto;
+        padding: 20px 0;
+        gap: 10px;
     }
 
 }

@@ -43,6 +43,7 @@ body{
     justify-content: space-evenly;
     flex-wrap: wrap;
     /* border: 2px solid blue; */
+    z-index: 2;
 }
 @media screen and (max-width:400px) {
     .box{
@@ -57,6 +58,7 @@ body{
     text-align: center;
     line-height: 97%;
 /* border: 2px solid peru; */
+/* position: absolute; */
 
 }
 @media screen and (max-width:480px) {
@@ -72,7 +74,7 @@ font-family: 'Gloock', serif;
 height: 200px;
 /* color: rgb(252, 159, 174); */
 color: var(--orange);
-z-index: 10;
+z-index: 1;
 }
 @media screen and (max-width:480px) {
     .head2{

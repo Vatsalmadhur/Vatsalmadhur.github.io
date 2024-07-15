@@ -82,7 +82,6 @@ useEffect(()=>{
             <p className="projTxt2"ref={el=>para=el}>
               Alongside are few of the projects that I've built and worked on.
                Each project embodies a commitment to excellence, blending technical expertise with creative innovation. Explore visual representations, providing tangible insights into the depth and quality of my work. These projects stand as testament to my dedication to delivering impactful solutions and exceeding expectations. <br /> You can see all my projects by clicking below!
-
             </p>
            <div ref={el=>button=el}> <Button text={"More"}  /></div>
            </div>
@@ -90,13 +89,13 @@ useEffect(()=>{
           </div>
           <div className="rightProject"timeline={tl} >
             <div className="card1" ref={el=>card1=el}>
-              <Card image={Bin} heading={"BINLocator"} subHeading={"An app to find nearest dustbins"} link={"https://github.com/theanuragshukla/undefined-DevHeat-2022"}  />
+              <Card heading={"shopApple"} subHeading={"shopApple,a frontend clone of the official Apple website,with advanced animations."} gitLink="https://github.com/Vatsalmadhur/shopApple.git" liveLink="https://vatsalmadhur.github.io/shopApple/" />
             </div>
             <div className="card2" ref={el=>card2=el} >
-              <Card image={AdBid} heading={"AdBid"} subHeading={"The Ad bidding platform built on Web3"} link={"https://github.com/theanuragshukla/ETHForAll"} />
+              <Card image={AdBid} heading={"AIcademia"} subHeading={"AIcademia personalizes learning by assessing skills and goals, curating content, and fostering community connections."} gitLink="https://github.com/Vatsalmadhur/AIcademia.git" liveLink="https://aicademia.madhurvatsal.tech" ytLink="https://youtu.be/m444x44co-U" />
             </div>
             <div className="card3" ref={el=>card3=el} >
-              <Card image={yt} heading={"!yt"} subHeading={"The Video streaming app."} link={"https://github.com/Vatsalmadhur/notYouTube"} />
+              <Card heading={"!youTube"} subHeading={"notYouTube streams videos using Rapid API, with dynamic updates, multiple categories, and a video search bar."} gitLink="https://github.com/Vatsalmadhur/notYouTube.git" liveLink="https://vatsalmadhur.github.io/notYouTube/"/>
             </div>
 
           </div>

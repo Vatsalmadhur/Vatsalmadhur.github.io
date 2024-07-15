@@ -70,15 +70,14 @@ function Name() {
           </p>
           <div className="box">
             <div className="head2" ref={h2ref}>
-              {/* Creative Web Developer */}
               {isDesktop ? (
-                <SubHeadLarge />
+                <SubHeadLarge className="subHead" />
               ) : (
                 <SubHeadSmall />
               )}
             </div>
             <div>
-            <Social />
+            <Social/>
             </div>
           </div>
         </div>

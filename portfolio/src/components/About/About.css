@@ -1,10 +1,11 @@
 .boxForAbt {
-  height: 100vh;
+  min-height: 100vh;
+  height: auto ;
   width: 100vw;
   display: flex;
   align-items: center;
   justify-content: space-around;
-  /* flex-wrap: wrap; */
+  flex-wrap: wrap;
   background-color: var(--grey);
   /* background-color: black; */
   /* border: 2px solid red; */
@@ -28,15 +29,18 @@
 
 }
 .head_abt_2 {
-  height: 90%;
-  width: min(800px,100%);
+  height: 50vh;
+  width: 45vw;
   /* position: absolute; */
   /* border: 2px solid red; */
   /* background-color: black; */
 }
-@media screen and (max-width:1000px) {
+@media screen and (max-width:1270px) {
   .head_abt_2 {
-    position: absolute;
+    aspect-ratio: 4/3 ;
+    min-height: 400px;
+    width: 100vw;
+    min-width: 400px;
   }
 
 }
@@ -47,7 +51,7 @@
   text-align: start;
   line-height: 150%;
   /*font-family: "Gloock", serif;*/
-  /* border: 2px solid red; */
+  /* border: 2px solid red;   */
   font-family: 'Raleway', sans-serif;
 }
 
@@ -63,7 +67,4 @@
     display: none;
   }
 
-}
-.canvas2{
-  aspect-ratio:auto;
 }

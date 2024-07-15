@@ -11,16 +11,19 @@ import Navbar from "../Navbar/Navbar";
 import { gsap } from "gsap";
 import Cursor from "../Cursor/Cursor";
 import { Heading } from "../Heading/Heading";
+import Info from "../AboutInfo/Info";
 
 function CCB() {
   const { camera, gl } = useThree();
   const reqRef = useRef();
+  const controls = new OrbitControls(camera, gl.domElement);
+  controls.rotateSpeed=0.1
   const animate = () => {
     controls.enableDamping = true;
     controls.enablePan = false;
     controls.enableZoom = false;
-    controls.autoRotate = true;
-    controls.autoRotateSpeed = 10;
+    // controls.autoRotate = true;
+    // controls.autoRotateSpeed = 0.5;
     controls.minDistance = 13;
     controls.maxDistance = 13;
     controls.update();
@@ -28,7 +31,8 @@ function CCB() {
     reqRef.current = requestAnimationFrame(animate);
   };
 
-  const controls = new OrbitControls(camera, gl.domElement);
+
+
   useEffect(() => {
     reqRef.current = requestAnimationFrame(animate);
     return () => {
@@ -69,13 +73,11 @@ function About() {
             className="canvas2"
             camera={{ position: [0, 0, 15] }}
             color="black"
-          >
-            <Sphere />
+          > 
+            <Info/>
             <CCB />
           </Canvas>
-          <p className="subHeadCanvas">
-            Bored reading? Give me a spin instead!
-          </p>
+
         </div>
       </div>
       {/* <Forward to={"/project"} /> */}
