@@ -1,6 +1,6 @@
 .cardBody{
     height: 350px;
-    width: 250px;
+    width: 260px;
 border: 4px solid var(--orange);
 border-radius: 15px;
 display: flex;
@@ -41,12 +41,18 @@ flex-direction: column;
 }
 .cardAbt2{
     font-size: 1.2rem;
-    padding-left: 10px;
+    padding: 10px;
     font-family: 'Raleway', sans-serif;
     color: var(--grey);
-    /* border: 2px solid red; */
+    /* border: 2px solid red;   */
     min-height: 100px;
-    text-align: start;
+    text-align: center ;
+
+}
+@media screen and (max-width:1400px) {
+    .cardAbt2{
+        color: cornsilk;
+    }
 
 }
 .cardAbt3{
