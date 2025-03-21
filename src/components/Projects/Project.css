@@ -1,0 +1,59 @@
+.bodyOfProject{
+    background-color: var(--grey);
+    min-height: 100%;
+    height: auto;
+    width: 100vw;
+    overflow: auto;
+}
+.mainOfProject{
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--grey);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.leftProject{
+    height: auto;
+    width: min(700px,100%);
+    color: white;
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+
+}
+.rightProject{
+    height: 800px;
+    width: min(700px,100%);
+    color: white;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+@media screen and (max-width:600px) {
+    .rightProject{
+        flex-direction: row;
+        height: auto;
+        padding: 20px 0;
+        gap: 10px;
+    }
+
+}
+
+
+.projTxt1{
+    font-size:min(6rem,20vw);
+    font-family: 'Gloock', serif;
+    color: var(--orange);
+    margin-bottom: -200px;
+    margin-top: 200px;
+}
+.projTxt2{
+    font-size: 1.4rem;
+    font-family: 'Raleway', sans-serif;
+    margin: 30px 0;
+
+}

@@ -1,0 +1,17 @@
+:root{
+    --orange:#ff6f1d;
+    --grey:#21282a;
+    /* --grey:rgba(255, 0, 0, 0.75); */
+
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* .playwrite-it-moderna-<uniquifier> {
+    font-family: "Playwrite IT Moderna", cursive;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+  } */
