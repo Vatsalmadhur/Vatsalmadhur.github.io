@@ -1,4 +1,4 @@
-import{r as Oe,g as t_}from"./index-950ba05c.js";import{_ as Hg}from"./Navbar-4ec860f4.js";/**
+import{r as Oe,g as t_}from"./index-b7ac7f02.js";import{_ as Hg}from"./Navbar-e1b76a94.js";/**
  * @license
  * Copyright 2010-2023 Three.js Authors
  * SPDX-License-Identifier: MIT
