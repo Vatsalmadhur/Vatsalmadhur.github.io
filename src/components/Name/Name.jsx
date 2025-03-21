@@ -24,19 +24,19 @@ function Name() {
   const tl = gsap.timeline();
   useLayoutEffect(() => {
     tl.to(line, { duration: 4, cssRule: { scaleX: 1 } });
-    tl.to(
-      h1ref.current,
-      {
-        duration: 2,
-        clipPath: "polygon(0 2%, 100% 1%, 100% 100%, 0% 100%)",
-        y: 20,
-      },
-      "-=3"
-    );
-    tl.to(h2ref.current, {
-      duration: 2,
-      clipPath: "polygon(0 2%, 100% 1%, 100% 100%, 0% 100%)",
-    },'-=2'),
+    // tl.to(
+    //   h1ref.current,
+    //   {
+    //     duration: 2,
+    //     clipPath: "polygon(0 2%, 100% 1%, 100% 100%, 0% 100%)",
+    //     y: 20,
+    //   },
+    //   "-=3"
+    // );
+    // tl.to(h2ref.current, {
+    //   duration: 2,
+    //   clipPath: "polygon(0 2%, 100% 1%, 100% 100%, 0% 100%)",
+    // },'-=2'),
       // "-=6";
 
     tl.to(arrow.current, {
@@ -65,9 +65,9 @@ function Name() {
     <>
       <div className="container">
         <div id="content">
-          <p className="head1" ref={h1ref}>
+          {/* <p className="head1" ref={h1ref}>
             Madhur <br /> Vatsal
-          </p>
+          </p> */}
           <div className="box">
             <div className="head2" ref={h2ref}>
               {isDesktop ? (

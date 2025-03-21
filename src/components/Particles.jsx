@@ -11,7 +11,7 @@ import {useLoader} from "react-three-fiber"
 import { TextureLoader } from "three";
 
 
-function Random() {
+function Particles() {
   // let i=0;
   const point = useRef();
   console.log(point)
@@ -67,7 +67,7 @@ Tick();
   return (
     // <>
     <points ref={point} >
-    
+
       <primitive attach="geometry" object={particleGeo} />
       <pointsMaterial
        size={0.015}
@@ -80,4 +80,4 @@ Tick();
   );
 }
 
-export default Random;
+export default Particles;
