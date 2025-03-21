@@ -1,0 +1,47 @@
+{
+  "name": "portfolio",
+  "private": true,
+  "version": "0.0.0",
+  "sideEffects": false,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
+    "analyze": "webpack --profile --json > stats.json && webpack-bundle-analyzer stats.json"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
+    "@frank-mayer/react-tag-cloud": "^1.1.1",
+    "@gsap/react": "^2.1.0",
+    "@mui/icons-material": "^5.11.11",
+    "@mui/material": "^5.11.10",
+    "@react-three/cannon": "^6.5.2",
+    "@react-three/drei": "^9.57.3",
+    "@splinetool/loader": "^1.0.91",
+    "@splinetool/r3f-spline": "^1.0.2",
+    "@splinetool/react-spline": "^2.2.6",
+    "@splinetool/runtime": "^1.0.91",
+    "gh-pages": "^5.0.0",
+    "gsap": "^3.11.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.8.1",
+    "react-three-fiber": "^6.0.13",
+    "TagCloud": "^2.3.2",
+    "three": "^0.149.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.27",
+    "@types/react-dom": "^18.0.10",
+    "@vitejs/plugin-react": "^3.1.0",
+    "purgecss": "^7.0.2",
+    "vite": "^4.1.0",
+    "webpack": "^5.98.0",
+    "webpack-bundle-analyzer": "^4.10.2",
+    "webpack-cli": "^6.0.1"
+  }
+}

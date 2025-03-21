@@ -1,0 +1,17 @@
+.homeRight{
+    height: 50px;
+    width: 50px;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    z-index: 1;
+    position: absolute;
+    bottom: 45%;
+    right: 2%;
+}
+@media  screen and (max-width:930px) {
+    .homeRight{
+        position: absolute;
+        bottom: 5vh;
+        right: 45%;
+    }
+
+}
