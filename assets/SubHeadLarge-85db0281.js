@@ -1,0 +1,1 @@
+import{R as e}from"./index-f616eaaf.js";import{z as t}from"./react-spline-98b7bada.js";function s(){return e.createElement(t,{scene:"https://prod.spline.design/mEkQHnbiT1f5jD0y/scene.splinecode"})}export{s as default};
