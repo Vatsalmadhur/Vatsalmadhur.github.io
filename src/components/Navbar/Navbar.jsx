@@ -1,121 +1,70 @@
 import "./Navbar.css";
-import React, { useRef, useState } from "react";
-import { Drawer, IconButton, List, ListItem, Typography } from "@mui/material";
-import { Box } from "@mui/system";
+import React, { useState } from "react";
+import { Drawer, IconButton, List, ListItem, Typography, Box } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 import MenuIcon from "@mui/icons-material/Menu";
 import HomeIcon from "@mui/icons-material/Home";
 import AccountBoxIcon from "@mui/icons-material/AccountBox";
 import CodeIcon from "@mui/icons-material/Code";
 import DataObjectIcon from "@mui/icons-material/DataObject";
 import ContactMailIcon from "@mui/icons-material/ContactMail";
-import { useNavigate } from "react-router-dom";
-import { ThemeProvider, createTheme } from '@mui/material/styles';
+
+const navItems = [
+  { path: "/", label: "Home", icon: <HomeIcon sx={{ color: "#ff6f1d" }} /> },
+  { path: "/about", label: "About", icon: <AccountBoxIcon sx={{ color: "#ff6f1d" }} /> },
+  { path: "/skills", label: "Skills", icon: <CodeIcon sx={{ color: "#ff6f1d" }} /> },
+  { path: "/project", label: "Projects", icon: <DataObjectIcon sx={{ color: "#ff6f1d" }} /> },
+  { path: "/contact", label: "Contact", icon: <ContactMailIcon sx={{ color: "#ff6f1d" }} /> }
+];
+
 function Navbar() {
-  const Navigate = useNavigate();
+  const navigate = useNavigate();
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
-  const theme = createTheme({
-    breakpoints: {
-      values: {
-        xxs: 0,
-        xs: 300,
-        sm: 600,
-        md: 900,
-        lg: 1200,
-        xl: 1536
-      }
-    }
-  });
+
+  const handleNavigate = (path) => {
+    navigate(path);
+    setIsDrawerOpen(false);
+  };
 
   return (
     <>
-     <ThemeProvider theme={theme}>
       <IconButton
         size="large"
-        aria-label="logo"
+        aria-label="menu"
         onClick={() => setIsDrawerOpen(true)}
-        sx={{ position: "absolute", top: "0", right: "0", zIndex: "3" }}
+        sx={{ position: "absolute", top: 0, right: 0, zIndex: 3 }}
       >
         <MenuIcon fontSize="large" sx={{ color: "#ff6f1d" }} />
       </IconButton>
-      <Drawer
-        anchor="top"
-        open={isDrawerOpen}
-        onClose={() => setIsDrawerOpen(false)}
-      >
-        <List sx={{ bgcolor: "#21282a", color: "#ffffff" }}>
-          <Box className="navBox"
+
+      <Drawer anchor="top" open={isDrawerOpen} onClose={() => setIsDrawerOpen(false)}>
+        <List sx={{ bgcolor: "#21282a", color: "#ffffff",py:0.5 }}>
+          <Box
+            className="navBox"
             sx={{
               display: "flex",
-              alignItems:"center",
+              alignItems: "center",
               justifyContent: "space-around",
               flexWrap: "wrap",
-              flexDirection:{
-                xs: "column",
-                sm: "row",
-                md: "row",
-                lg: "row",
-                xl: "row"
-              },
-              height:{
-                xs:300,
-                sm:50,
-                md:50,
-                lg:50,
-                xl:50
-              }
+              flexDirection: { xs: "column", sm: "row" },
+              height: { xs: 300, sm: 50 },
             }}
           >
-            <ListItem
-              onClick={() => {
-                Navigate("/");
-              }}
-              sx={{ width: "100px",'&:hover':{cursor:"pointer"} }}
-            >
-              <HomeIcon sx={{ color: "#ff6f1d" }} />
-              <Typography ml={1}   >Home</Typography>
-            </ListItem>
-
-            <ListItem
-              onClick={() => {
-                Navigate("/about");
-              }}
-              sx={{ width: "100px",'&:hover':{cursor:"pointer"} }}
-            >
-              <AccountBoxIcon sx={{ color: "#ff6f1d" }} />
-              <Typography ml={1}>About</Typography>
-            </ListItem>
-            <ListItem
-              onClick={() => {
-                Navigate("/skills");
-              }}
-              sx={{ width: "100px",'&:hover':{cursor:"pointer"} }}
-            >
-              <CodeIcon sx={{ color: "#ff6f1d" }} />
-              <Typography ml={1}>Skills</Typography>{" "}
-            </ListItem>
-            <ListItem
-              onClick={() => {
-                Navigate("/project");
-              }}
-              sx={{ width: "100px",'&:hover':{cursor:"pointer"} }}
-            >
-              <DataObjectIcon sx={{ color: "#ff6f1d" }} />
-              <Typography ml={1}>Projects</Typography>
-            </ListItem>
-            <ListItem
-              onClick={() => {
-                Navigate("/contact");
-              }}
-              sx={{ width: "100px",'&:hover':{cursor:"pointer"} }}
-            >
-              <ContactMailIcon sx={{ color: "#ff6f1d" }} />
-              <Typography ml={1}>Contact</Typography>
-            </ListItem>
+            {navItems.map(({ path, label, icon }) => (
+              <ListItem
+                key={path}
+                onClick={() => handleNavigate(path)}
+                sx={{ width: 100, "&:hover": { cursor: "pointer" } }}
+              >
+                {icon}
+                <Typography ml={1}>{label}</Typography>
+              </ListItem>
+            ))}
           </Box>
         </List>
       </Drawer>
-      </ThemeProvider>
     </>
   );
 }
+
 export default Navbar;

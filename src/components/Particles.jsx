@@ -2,10 +2,8 @@ import React from "react";
 import { useRef } from "react";
 // import { useThree } from "@react-three/fiber";
 // import { Points, PointsMaterial } from "three";
-import { BufferGeometry, Sphere } from "three";
+import { BufferGeometry } from "three";
 import { BufferAttribute } from "three";
-// import { SphereGeometry } from "three";
-// import CamOrbitControls from "./CamOrbitControls";
 import { Clock } from "three";
 import {useLoader} from "react-three-fiber"
 import { TextureLoader } from "three";

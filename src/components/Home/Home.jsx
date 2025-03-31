@@ -4,7 +4,7 @@ import Name from "../Name/Name.jsx";
 import { Canvas } from "react-three-fiber";
 import Particles from "../Particles";
 import CamOrbitControls from "../CamOrbitControls";
-import Box from "../Box";
+import Torus from "../Torus";
 import Navbar from "../Navbar/Navbar";
 
 function home() {
@@ -16,7 +16,7 @@ function home() {
         <Canvas className="canvas" camera={{ position: [0, 0, 5] }}>
           <Particles />
           <CamOrbitControls />
-          <Box />
+          <Torus />
         </Canvas>
       </div>
     </>

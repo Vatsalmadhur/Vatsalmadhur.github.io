@@ -37,7 +37,7 @@ function Skills(){
     return(
         <>
         <Navbar/>
-        <Cursor/>
+        {/* <Cursor/> */}
         <div className="bodyOfSkills">
         <div className="leftOfSkills">
             <div className="leftWrap">

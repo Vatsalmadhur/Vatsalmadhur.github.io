@@ -31,10 +31,10 @@ flex-direction: column;
     text-align: center;
 }
 .cardAbt2{
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     padding: 10px;
     font-family: 'Raleway', sans-serif;
-    color: var(--grey);
+    color: cornsilk;
     min-height: 100px;
     text-align: center ;
 

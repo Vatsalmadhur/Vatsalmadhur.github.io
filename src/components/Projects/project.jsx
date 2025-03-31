@@ -73,7 +73,7 @@ useEffect(()=>{
   return (
     <>
       <Navbar />
-      <Cursor/>
+      {/* <Cursor/> */}
       <div className="bodyOfProject">
         <div className="mainOfProject">
           <div className="leftProject">

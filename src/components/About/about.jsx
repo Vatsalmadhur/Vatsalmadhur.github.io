@@ -5,7 +5,6 @@ import { useThree } from "@react-three/fiber";
 import { useEffect } from "react";
 import { useRef } from "react";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
-import Sphere from "../Sphere/Sphere.jsx";
 import Forward from "../Navigation/Forward";
 import Navbar from "../Navbar/Navbar";
 import { gsap } from "gsap";
@@ -53,7 +52,7 @@ function About() {
   return (
     <>
       <Navbar />
-      <Cursor/>
+      {/* <Cursor/> */}
       <div className="boxForAbt">
         <div className="head_abt_1">
           <div className="abtText1"><Heading title="About Me!"/></div>
