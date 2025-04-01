@@ -3,7 +3,7 @@ import '../src/App.css';
 import { Route, Routes } from "react-router-dom";
 import Loading from "./components/Loader/Loading";
 // import Navbar from "./components/Navbar/Navbar";
-
+import { SpeedInsights } from "@vercel/speed-insights/react"
 const Home = React.lazy(() => import('./components/Home/Home.jsx'));
 const About = React.lazy(() => import("./components/About/about"));
 const Skills = React.lazy(() => import("./components/Skills/Skills"));
@@ -13,6 +13,8 @@ const Navbar = React.lazy(() => import("./components/Navbar/Navbar"));
 
 function App() {
   return (
+    <>
+    <SpeedInsights/>
     <Suspense fallback={<Loading/>}>
       <Navbar/>
       <Routes>
@@ -23,6 +25,7 @@ function App() {
         <Route exact path="/contact" element={<Contact />} />
       </Routes>
     </Suspense>
+    </>
   );
 }
 
