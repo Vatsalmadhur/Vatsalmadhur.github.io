@@ -11,6 +11,12 @@ body{
     position: absolute;
     color: white;
     flex-wrap: wrap;
+    /* border: 2px solid red; */
+}
+@media screen and (max-width:400px) {
+    .container{
+       justify-content: center;
+    }
 }
 #content{
     display: flex;
@@ -62,15 +68,18 @@ body{
 .head2{
 font-size: 2rem;
 font-family: 'Gloock', serif;
-height: 200px;
+height: 250px;
 color: var(--orange);
 z-index: 1;
+/* border: 2px solid pink; */
+width: 500px;
 }
 @media screen and (max-width:480px) {
     .head2{
         font-size: 1.5rem;
         margin-top: 30px;
         height: 100px;
+        width: 350px;
     }
 
 }

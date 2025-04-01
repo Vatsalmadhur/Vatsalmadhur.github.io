@@ -4,9 +4,6 @@ import Button from "../Button/Button";
 import Card from "../Card/Card";
 import Navbar from "../Navbar/Navbar";
 import { gsap,Power3 } from "gsap";
-import AdBid from "/AdBid.jpeg"
-import Bin from "/BinLocator.png"
-import yt from "/yt.png"
 import Cursor from "../Cursor/Cursor";
 import { Heading } from "../Heading/Heading";
 
@@ -92,7 +89,7 @@ useEffect(()=>{
               <Card heading={"shopApple"} subHeading={"shopApple,a frontend clone of the official Apple website,with advanced animations."} gitLink="https://github.com/Vatsalmadhur/shopApple.git" liveLink="https://vatsalmadhur.github.io/shopApple/" />
             </div>
             <div className="card2" ref={el=>card2=el} >
-              <Card image={AdBid} heading={"AIcademia"} subHeading={"AIcademia personalizes learning by assessing skills and goals, curating content, and fostering community connections."} gitLink="https://github.com/Vatsalmadhur/AIcademia.git" liveLink="https://aicademia.madhurvatsal.tech" ytLink="https://youtu.be/m444x44co-U" />
+              <Card heading={"Harmony Heals"} subHeading={"Embark on a wellness journey with the harmonious blend of solfeggio frequencies, Tibetan singing bowls, and personalized health assistance."} gitLink="https://github.com/Vatsalmadhur/harmonyHeals" liveLink="https://harmony-heals.vercel.app/" ytLink="" />
             </div>
             <div className="card3" ref={el=>card3=el} >
               <Card heading={"!youTube"} subHeading={"notYouTube streams videos using Rapid API, with dynamic updates, multiple categories, and a video search bar."} gitLink="https://github.com/Vatsalmadhur/notYouTube.git" liveLink="https://vatsalmadhur.github.io/notYouTube/"/>

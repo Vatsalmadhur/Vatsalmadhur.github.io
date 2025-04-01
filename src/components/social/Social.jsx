@@ -17,7 +17,7 @@ function Social(){
     const soc = useRef();
     const s=gsap.utils.selector(soc)
     const tl = gsap.timeline();
-    
+
      useEffect(()=>{
 
         tl.to(s(".icon"), {
@@ -25,7 +25,7 @@ function Social(){
             clipPath: "polygon(0 2%, 100% 1%, 100% 100%, 0% 100%)",
           }),"-=4";
      })
-    
+
 
     return(
         <div className="outerIcon" ref={soc}>

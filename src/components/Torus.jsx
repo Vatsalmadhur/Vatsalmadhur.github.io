@@ -1,14 +1,14 @@
+import { useTexture } from "@react-three/drei";
 import React from "react";
-import { TextureLoader } from "three";
 import { useLoader } from "react-three-fiber";
+import { TextureLoader } from "three";
 function Torus() {
   // const points = useRef();
-  const textureLoader = useLoader(TextureLoader,'/Ellipse.png');
+  const textureLoader = useLoader(TextureLoader,'/Ellipse.webp');
 
 
   return (
     <>
-      {/* <pointLight args={[0xff0000, 0.1]} position={[2, 3, 4]} intensity={1.5} /> */}
 
       <points >
         <torusGeometry args={[2, 0.5, 16, 100]} />

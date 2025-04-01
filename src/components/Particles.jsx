@@ -12,7 +12,7 @@ import { TextureLoader } from "three";
 function Particles() {
   // let i=0;
   const point = useRef();
-  console.log(point)
+  // console.log(point)
   const particleGeo = new BufferGeometry();
   const partCount = 30000;
   const posArray = new Float32Array(partCount * 3);
@@ -35,7 +35,7 @@ let mouseY = 0;
 function animateParticles(event){
   mouseX=event.clientX
   mouseY=event.clientY
-  console.log(mouseX)
+  // console.log(mouseX)
 
 }
 const time = new Clock();
@@ -56,7 +56,7 @@ Tick();
 
 // function createParticleSystems() {
 //   // Load the texture that will be used to display our snow
-  const textureLoader = useLoader(TextureLoader,'/snowflake.png');
+  const textureLoader = useLoader(TextureLoader,'/snowflake.webp');
 
   // const sprite1 = textureLoader.load(
   //   "./moon.png"

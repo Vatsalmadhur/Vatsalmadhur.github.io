@@ -9,11 +9,11 @@ function Cube() {
     null,
     null,
     null,
-    useTexture( 'myImg3.jpg'),
-    useTexture( 'myInfo4.jpeg'),
+    useTexture( 'myImg3.webp'),
+    useTexture( 'myImg2.webp'),
   ];
 
-  const materials = textures.map(texture => texture ? new THREE.MeshStandardMaterial({ map: texture }): new THREE.MeshToonMaterial({color:"#ff6f1d"}));
+  const materials = textures.map(texture => texture ? new THREE.MeshStandardMaterial({ map: texture }): new THREE.MeshBasicMaterial({color:"#ff6f1d"}));
   return (
     <mesh geometry={new THREE.BoxGeometry(24,18,0.1)}
      material={materials}
@@ -24,7 +24,7 @@ function Cube() {
 function Info() {
   return (
     <>
-       <ambientLight intensity={0.5} />
+       <ambientLight intensity={2} color={"white"} />
       <Cube />
       </>
   );

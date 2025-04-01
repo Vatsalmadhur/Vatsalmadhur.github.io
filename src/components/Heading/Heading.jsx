@@ -19,8 +19,8 @@ export const Heading = (props) => {
     return (
         <>
             <div className="outer">
-                {strArr.map((item) => (
-                    <div>{item === " " ? <div className='blankText'></div> : <div className='text'>{item}</div>}
+                {strArr.map((item,idx) => (
+                    <div key={idx} >{item === " " ? <div className='blankText'></div> : <div className='text'>{item}</div>}
                     </div>
                 ))}
             </div>

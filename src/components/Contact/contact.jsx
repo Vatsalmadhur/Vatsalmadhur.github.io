@@ -1,60 +1,29 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Canvas } from "@react-three/fiber";
-import { OrbitControls, PerspectiveCamera, useGLTF } from "@react-three/drei";
+import {  OrbitControls} from "@react-three/drei";
 import "./Contact.css";
 import Navbar from "../Navbar/Navbar";
 import gsap from "gsap";
-import { useThree } from '@react-three/fiber'
-
 import Form from '../Form/Form'
 import Cursor from "../Cursor/Cursor";
 import { Heading } from "../Heading/Heading";
 import Phone from "../Phone/Phone";
-import Lights from "../Phone/Lights";
-
-
-
-// export function CamOrbitControls(props) {
-
-//   const { camera, gl } = useThree();
-//   const reqRef = useRef();
-//   const controls = new OrbitControls(camera, gl.domElement);
-//   const animate = () => {
-//     controls.enableDamping = true;
-//     controls.enablePan = false;
-//     controls.enableZoom = false
-//     // controls.autoRotate = true
-//     controls.autoRotateSpeed = 5
-//     controls.minDistance = 12
-//     controls.maxDistance = 5
-//     controls.update();
-//     reqRef.current = requestAnimationFrame(animate);
-//   }
-
-//   useEffect(() => {
-//     reqRef.current = requestAnimationFrame(animate);
-
-//     return () => {
-//       controls.dispose();
-//     };
-//   }, [camera, gl]);
-// }
+const Lights = React.lazy(()=> import('../Phone/Lights'))
 
 function contact(props) {
-  // const { nodes, materials } = useGLTF("/phone2.gltf");
+
   const tl = new gsap.timeline();
-  // let contH1 = useRef(null);
-  // let contH2 = useRef(null);
+  const textRef = useRef(null);
+
   useEffect(() => {
-    tl.from(".contText2", {
+    tl.from(textRef.current, {
       opacity: 0,
       x: 100,
-      stagger: {
-        amount: 0.4
-      }
+      stagger: { amount: 0.4 },
+    });
 
-    }), []
-  })
+    return () => tl.kill(); 
+  }, []);
   const [loading,setLoading] = useState(true);
 
   useEffect(() => {
@@ -70,7 +39,7 @@ function contact(props) {
           <div className="leftOfContact" timeline={tl}>
             <div className="leftWrap">
               <div className="contTxt1" ><Heading title="Contact" /><Heading title="Me!" /></div>
-              <p className="contTxt2" >
+              <p ref={textRef} className="contTxt2" >
                 Thank you for visiting my portfolio! Whether you have questions about my work, want to collaborate on a project, or simply want to say hello, I'd love to hear from you. Please feel free to reach out using the contact form below.
               </p>
               <div className="bodyOfForm">

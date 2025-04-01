@@ -4,36 +4,13 @@ import { Canvas } from "@react-three/fiber";
 import { useThree } from "@react-three/fiber";
 import { useEffect } from "react";
 import { useRef } from "react";
-import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import Forward from "../Navigation/Forward";
 import Navbar from "../Navbar/Navbar";
 import { gsap } from "gsap";
 import Cursor from "../Cursor/Cursor";
 import { Heading } from "../Heading/Heading";
+import { OrbitControls, OrthographicCamera } from "@react-three/drei";
 const Info = React.lazy(()=>import("../AboutInfo/Info"))
-
-function CCB() {
-  const { camera, gl } = useThree();
-  const reqRef = useRef();
-  const controls = new OrbitControls(camera, gl.domElement);
-  controls.rotateSpeed=0.1
-  const animate = () => {
-    controls.enableDamping = true;
-    controls.enablePan = false;
-    controls.enableZoom = false;
-    controls.minDistance = 13;
-    controls.maxDistance = 13;
-    controls.update();
-    console.log("Hey Stalker!");
-    reqRef.current = requestAnimationFrame(animate);
-  };
-  useEffect(() => {
-    reqRef.current = requestAnimationFrame(animate);
-    return () => {
-      controls.dispose();
-    };
-  }, [camera, gl]);
-}
 
 function About() {
   const tl = new gsap.timeline();
@@ -63,11 +40,13 @@ function About() {
         <div className="head_abt_2">
           <Canvas
             className="canvas2"
-            camera={{ position: [0, 0, 15] }}
+            // camera={{ position: [0, 0, 15] }}
             color="black"
+            // style={{border:"2px solid red"}}
           >
+            <OrthographicCamera makeDefault position={[0,10,35]} zoom={25} />
             <Info/>
-            <CCB />
+            <OrbitControls enablePan={false} enableZoom={false} rotateSpeed={0.1}/>
           </Canvas>
 
         </div>

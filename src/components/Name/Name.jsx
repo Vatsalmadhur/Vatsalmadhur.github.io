@@ -4,9 +4,14 @@ import { gsap } from "gsap";
 import { CSSRulePlugin } from "gsap/CSSRulePlugin";
 import Forward from "../Navigation/Forward";
 import RightArrow from '../icons/rightArrow2.png';
+import Loading from "../Loader/Loading";
+// import Creative from "../CreativeModel/Creative";
+import { Canvas } from "react-three-fiber";
 
 // Lazy load non-essential components
 const Social = lazy(() => import("../social/Social.jsx"));
+const Creative = lazy(() => import("../CreativeModel/Creative"));
+
 const SubHeadLarge = lazy(() => import("../cwd/SubHeadLarge"));
 const SubHeadSmall = lazy(() => import("../cwd/SubHeadSmall"));
 
@@ -52,11 +57,14 @@ function Name() {
           </p>
           <div className="box">
             <div className="head2" ref={h2ref}>
-              <Suspense fallback={<div>Loading...</div>}>
-                {isDesktop ? <SubHeadLarge className="subHead" /> : <SubHeadSmall />}
+              <Suspense fallback={<Loading/>}>
+              <Canvas  >
+                {/* {isDesktop ? <SubHeadLarge className="subHead" /> : <SubHeadSmall />} */}
+                <Creative/>
+              </Canvas>
               </Suspense>
             </div>
-            <Suspense fallback={<div>Loading...</div>}>
+            <Suspense fallback={<Loading/>}>
               <Social />
             </Suspense>
           </div>
