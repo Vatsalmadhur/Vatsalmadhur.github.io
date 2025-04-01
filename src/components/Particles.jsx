@@ -7,7 +7,7 @@ import { BufferAttribute } from "three";
 import { Clock } from "three";
 import {useLoader} from "react-three-fiber"
 import { TextureLoader } from "three";
-
+import * as THREE from 'three';
 
 function Particles() {
   // let i=0;
@@ -69,9 +69,14 @@ Tick();
       <primitive attach="geometry" object={particleGeo} />
       <pointsMaterial
        size={0.015}
-        color="cornSilk"
+        color="white"
         map={textureLoader}
-        blending='screen'
+        transparent
+  opacity={0.9} // Slightly lower opacity to avoid oversaturation
+  blending={THREE.CustomBlending}
+  blendSrc={THREE.OneMinusDstColorFactor}
+  blendDst={THREE.One}
+  blendEquation={THREE.AddEquation}
          />
     </points>
     // </>

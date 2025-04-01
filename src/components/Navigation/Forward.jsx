@@ -1,6 +1,6 @@
 import React from "react";
 import './Forward.css'
-import RightArrow from '../icons/rightArrow2.png'
+import RightArrow from '/icons/rightArrow2.png'
 import { Link } from "react-router-dom";
 import { useRef } from "react";
 import { useLayoutEffect } from "react";
@@ -19,7 +19,7 @@ function Forward(props){
   }, []);
     return(
         <>
-        <Link to={props.to}><img ref={arrow} className="homeRight" src={RightArrow} alt="" /></Link>
+        <Link to={props.to} aria-label="Go forward" ><img ref={arrow} className="homeRight" src={RightArrow} alt="" /></Link>
         </>
     )
 }
