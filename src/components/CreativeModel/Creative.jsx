@@ -6,19 +6,15 @@ import useMobile from '../../hooks/useMobile'
 
 export default function Creative(props) {
   const { nodes } = useGLTF('/creative.gltf')
-  const material = new THREE.MeshStandardMaterial({
-    color:'#ff6f1d',
-  metalness:1,
-  roughness:4
+  const material = new THREE.MeshBasicMaterial({
+    color:'#fe6301'
 })
   const isMobile = useMobile()
   return (
     <>
         <OrbitControls enablePan={false} enableZoom={false} />
-        <Environment preset='dawn'/>
     <group {...props} dispose={null} >
       <group scale={0.01}>
-        {/* <ambientLight intensity={1} color="#ffffff"/> */}
         <mesh
           castShadow
           receiveShadow

@@ -1,7 +1,7 @@
 import "./Navbar.css";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Drawer, IconButton, List, ListItem, Typography, Box } from "@mui/material";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import MenuIcon from "@mui/icons-material/Menu";
 import HomeIcon from "@mui/icons-material/Home";
 import AccountBoxIcon from "@mui/icons-material/AccountBox";
@@ -19,12 +19,12 @@ const navItems = [
 
 function Navbar() {
   const navigate = useNavigate();
+  const location = useLocation(); 
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
-  const handleNavigate = (path) => {
-    navigate(path);
+  useEffect(() => {
     setIsDrawerOpen(false);
-  };
+  }, [location.pathname]);
 
   return (
     <>
@@ -38,7 +38,7 @@ function Navbar() {
       </IconButton>
 
       <Drawer anchor="top" open={isDrawerOpen} onClose={() => setIsDrawerOpen(false)}>
-        <List sx={{ bgcolor: "#21282a", color: "#ffffff",py:0.5 }}>
+        <List sx={{ bgcolor: "#21282a", color: "#ffffff", py: 0.5 }}>
           <Box
             className="navBox"
             sx={{
@@ -53,7 +53,7 @@ function Navbar() {
             {navItems.map(({ path, label, icon }) => (
               <ListItem
                 key={path}
-                onClick={() => handleNavigate(path)}
+                onClick={() => navigate(path)}
                 sx={{ width: 100, "&:hover": { cursor: "pointer" } }}
               >
                 {icon}
