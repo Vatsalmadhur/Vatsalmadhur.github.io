@@ -28,7 +28,7 @@ function About() {
 
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       {/* <Cursor/> */}
       <div className="boxForAbt">
         <div className="head_abt_1">

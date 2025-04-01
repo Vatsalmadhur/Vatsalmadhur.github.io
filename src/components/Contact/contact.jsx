@@ -22,7 +22,7 @@ function contact(props) {
       stagger: { amount: 0.4 },
     });
 
-    return () => tl.kill(); 
+    return () => tl.kill();
   }, []);
   const [loading,setLoading] = useState(true);
 
@@ -33,7 +33,7 @@ function contact(props) {
 
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       {/* <Cursor /> */}
         <div className="mainBoxOfContact">
           <div className="leftOfContact" timeline={tl}>
