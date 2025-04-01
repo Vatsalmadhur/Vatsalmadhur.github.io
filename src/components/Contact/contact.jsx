@@ -1,21 +1,20 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef, } from "react";
 import { Canvas } from "@react-three/fiber";
 import {  OrbitControls} from "@react-three/drei";
 import "./Contact.css";
-import Navbar from "../Navbar/Navbar";
 import gsap from "gsap";
 import Form from '../Form/Form'
-import Cursor from "../Cursor/Cursor";
 import { Heading } from "../Heading/Heading";
 import Phone from "../Phone/Phone";
+import { useGSAP } from "@gsap/react";
 const Lights = React.lazy(()=> import('../Phone/Lights'))
 
-function contact(props) {
+function contact() {
 
-  const tl = new gsap.timeline();
   const textRef = useRef(null);
 
-  useEffect(() => {
+  const tl = new gsap.timeline();
+  useGSAP(() => {
     tl.from(textRef.current, {
       opacity: 0,
       x: 100,
@@ -24,17 +23,9 @@ function contact(props) {
 
     return () => tl.kill();
   }, []);
-  const [loading,setLoading] = useState(true);
-
-  useEffect(() => {
-    const timeout = setTimeout(() => setLoading(false), 3000);
-    return () => clearTimeout(timeout);
-  }, []);
 
   return (
     <>
-      {/* <Navbar /> */}
-      {/* <Cursor /> */}
         <div className="mainBoxOfContact">
           <div className="leftOfContact" timeline={tl}>
             <div className="leftWrap">
@@ -49,30 +40,21 @@ function contact(props) {
           </div>
 
           <div className="canvasDivOfContact">
-            {/* {loading ? (<p>Loading...</p>) : ( */}
             <Canvas gl={{ powerPreference: "high-performance", antialias: true }}  >
-              {/* <ambientLight intensity={1} /> */}
-              {/* <pointLight color={"#ffffff"} intensity={5} /> */}
-              {/* <directionalLight intensity={0.6} position={[0, 1, 1]} color={"white"} /> */}
               <Lights />
               <OrbitControls
                 enableDamping
                 enablePan={false}
                 enableZoom={false}
-                autoRotate={true} // Change to true if needed
+                autoRotate={true}
                 autoRotateSpeed={0.5}
-              // minDistance={5}
-              // maxDistance={12}
               />
 
             <Phone scale={[35, 35, 35]} />
             </Canvas>
-            {/* )} */}
           </div>
         </div>
     </>
   );
 }
-
-// useGLTF.preload("/phone2.gltf");
 export default contact;
