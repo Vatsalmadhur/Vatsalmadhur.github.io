@@ -15,8 +15,8 @@ function App() {
   return (
     <>
     <SpeedInsights/>
-    <Suspense fallback={<Loading/>}>
       <Navbar/>
+    <Suspense fallback={<Loading/>}>
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route exact path="/about" element={<About />} />
