@@ -59,15 +59,12 @@ function Name() {
           </p>
           <div className="box">
             <div className="head2" ref={h2ref}>
-              <Suspense fallback={<Loading />}>
                 <Canvas>
                   <Creative />
                 </Canvas>
-              </Suspense>
             </div>
-            <Suspense fallback={<Loading />}>
+
               <Social />
-            </Suspense>
           </div>
         </div>
       </div>

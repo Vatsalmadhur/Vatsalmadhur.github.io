@@ -49,7 +49,7 @@ function contact(props) {
           </div>
 
           <div className="canvasDivOfContact">
-            {loading ? (<p>Loading...</p>) : (
+            {/* {loading ? (<p>Loading...</p>) : ( */}
             <Canvas gl={{ powerPreference: "high-performance", antialias: true }}  >
               {/* <ambientLight intensity={1} /> */}
               {/* <pointLight color={"#ffffff"} intensity={5} /> */}
@@ -67,7 +67,7 @@ function contact(props) {
 
             <Phone scale={[35, 35, 35]} />
             </Canvas>
-            )}
+            {/* )} */}
           </div>
         </div>
     </>

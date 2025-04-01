@@ -43,8 +43,8 @@ function About() {
           </p>
         </div>
         <div className="head_abt_2">
-          {loading ? (<Loading/>)
-          : (
+          {/* {loading ? (<Loading/>)
+          : ( */}
           <Canvas
             className="canvas2"
             color="black"
@@ -53,7 +53,7 @@ function About() {
             <Info/>
             <OrbitControls enablePan={false} enableZoom={false} rotateSpeed={0.1}/>
           </Canvas>
-          )}
+          {/* )} */}
         </div>
       </div>
     </>
