@@ -13,7 +13,7 @@ function home() {
     <>
       <div className="boxOfCanvas">
         {/* <Navbar /> */}
-        {/* <Name /> */}
+        <Name />
         <Canvas className="canvas" camera={{ position: [0, 0, 5] }}>
           <Particles />
           <CamOrbitControls />
