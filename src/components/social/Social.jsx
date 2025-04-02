@@ -18,13 +18,13 @@ function Social(){
     const s=gsap.utils.selector(soc)
     const tl = gsap.timeline();
 
-     useEffect(()=>{
+    //  useEffect(()=>{
 
-        tl.to(s(".icon"), {
-            duration: 2,
-            clipPath: "polygon(0 2%, 100% 1%, 100% 100%, 0% 100%)",
-          }),"-=4";
-     })
+    //     tl.to(s(".icon"), {
+    //         duration: 2,
+    //         clipPath: "polygon(0 2%, 100% 1%, 100% 100%, 0% 100%)",
+    //       }),"-=4";
+    //  })
 
 
     return(

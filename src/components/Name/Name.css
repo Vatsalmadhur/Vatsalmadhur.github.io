@@ -86,5 +86,6 @@ width: 500px;
 .head1,.head2{
     flex-basis: 0;
     clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    /* opacity: 1; */
 }
 

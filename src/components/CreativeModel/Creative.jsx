@@ -1,75 +1,25 @@
 import React, { useRef } from 'react'
 import { useGLTF, OrthographicCamera, PerspectiveCamera, OrbitControls, Environment, } from '@react-three/drei'
-import { Canvas } from 'react-three-fiber'
 import * as THREE from 'three'
 import useMobile from '../../hooks/useMobile'
 
 export default function Creative(props) {
-  const { nodes } = useGLTF('/creative.gltf')
+  const { nodes } = useGLTF('/creative2.glb')
   const material = new THREE.MeshBasicMaterial({
     color:'#fe6301'
 })
   const isMobile = useMobile()
   return (
     <>
-        <OrbitControls enablePan={false} enableZoom={false} />
-    <group {...props} dispose={null} >
+      <OrbitControls enablePan={false} enableZoom={false} />
+    <group {...props} dispose={null}>
       <group scale={0.01}>
         <mesh
           castShadow
           receiveShadow
-          geometry={nodes.R.geometry}
+          geometry={nodes.ATI.geometry}
           material={material}
-          position={[232.786, -2.832, 0]}
-          scale={[0.717, 0.933, 1]}
-        >
-        </mesh>
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.LOP.geometry}
-          material={material}
-          position={[147.437, -3.763, 0]}
-          scale={[0.717, 0.933, 1]}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.V.geometry}
-          material={material}
-          position={[108.948, -0.376, 0]}
-          scale={[0.717, 0.933, 1]}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.E_3.geometry}
-          material={material}
-          position={[214.806, -7.789, 0]}
-          scale={[0.717, 0.933, 1]}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.E_2.geometry}
-          material={material}
-          position={[130.145, -6.856, 0]}
-          scale={[0.717, 0.933, 1]}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.E.geometry}
-          material={material}
-          position={[91.402, -6.856, 0]}
-          scale={[0.717, 0.933, 1]}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.D.geometry}
-          material={material}
-          position={[65.492, 39.947, 0]}
+          position={[-185.863, -8.637, 0.5]}
           scale={[0.717, 0.933, 1]}
         />
         <mesh
@@ -83,17 +33,25 @@ export default function Creative(props) {
         <mesh
           castShadow
           receiveShadow
-          geometry={nodes.E_1.geometry}
+          geometry={nodes.C.geometry}
           material={material}
-          position={[-10.13, -6.605, 2.501]}
+          position={[-224.724, 27.192, 0]}
           scale={[0.717, 0.933, 1]}
         />
         <mesh
           castShadow
           receiveShadow
-          geometry={nodes.W.geometry}
+          geometry={nodes.D.geometry}
           material={material}
-          position={[-50.452, 26.299, 0]}
+          position={[65.492, 39.947, 0]}
+          scale={[0.717, 0.933, 1]}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.E.geometry}
+          material={material}
+          position={[91.402, -6.856, 0]}
           scale={[0.717, 0.933, 1]}
         />
         <mesh
@@ -101,39 +59,31 @@ export default function Creative(props) {
           receiveShadow
           geometry={nodes.E_2.geometry}
           material={material}
+          position={[130.145, -6.856, 0]}
+          scale={[0.717, 0.933, 1]}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.E_3.geometry}
+          material={material}
+          position={[214.806, -7.789, 0]}
+          scale={[0.717, 0.933, 1]}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.E001.geometry}
+          material={material}
+          position={[-10.13, -6.605, 2.501]}
+          scale={[0.717, 0.933, 1]}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.E002.geometry}
+          material={material}
           position={[-97.926, -5.954, 0]}
-          scale={[0.717, 0.933, 1]}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.V_1.geometry}
-          material={material}
-          position={[-118.672, -0.636, 0]}
-          scale={[0.717, 0.933, 1]}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.Sphere.geometry}
-          material={material}
-          position={[-133.185, 12.821, 8]}
-          scale={[0.717, 0.933, 1]}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.Path.geometry}
-          material={material}
-          position={[-172.563, 19.369, 1.5]}
-          scale={[0.717, 0.933, 1]}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.ATI.geometry}
-          material={material}
-          position={[-185.863, -8.637, 0.5]}
           scale={[0.717, 0.933, 1]}
         />
         <mesh
@@ -147,7 +97,31 @@ export default function Creative(props) {
         <mesh
           castShadow
           receiveShadow
-          geometry={nodes.R_1.geometry}
+          geometry={nodes.LOP.geometry}
+          material={material}
+          position={[147.437, -3.763, 0]}
+          scale={[0.717, 0.933, 1]}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Path.geometry}
+          material={material}
+          position={[-172.563, 19.369, 1.5]}
+          scale={[0.717, 0.933, 1]}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.R.geometry}
+          material={material}
+          position={[232.786, -2.832, 0]}
+          scale={[0.717, 0.933, 1]}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.R001.geometry}
           material={material}
           position={[-219.232, -1.71, 0]}
           scale={[0.717, 0.933, 1]}
@@ -155,19 +129,40 @@ export default function Creative(props) {
         <mesh
           castShadow
           receiveShadow
-          geometry={nodes.C.geometry}
+          geometry={nodes.Sphere.geometry}
           material={material}
-          position={[-224.724, 27.192, 0]}
+          position={[-133.185, 12.821, 8]}
           scale={[0.717, 0.933, 1]}
         />
-        {/* <directionalLight intensity={0.7} decay={2} rotation={[0.203, 0.777, -0.286]} /> */}
-        <OrthographicCamera makeDefault far={100000} near={0} position={[0, 0, 1000]} zoom={isMobile ? 0.6 : 0.95} />
-        {/* <PerspectiveCamera position={[50,50,50]} /> */}
-
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.V.geometry}
+          material={material}
+          position={[108.948, -0.376, 0]}
+          scale={[0.717, 0.933, 1]}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.V001.geometry}
+          material={material}
+          position={[-118.672, -0.636, 0]}
+          scale={[0.717, 0.933, 1]}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.W.geometry}
+          material={material}
+          position={[-50.452, 26.299, 0]}
+          scale={[0.717, 0.933, 1]}
+        />
+         <OrthographicCamera makeDefault far={100000} near={0} position={[0, 0, 1000]} zoom={isMobile ? 0.6 : 0.95} />
       </group>
     </group>
     </>
   )
 }
 
-useGLTF.preload('/creative.gltf')
+useGLTF.preload('/creative2.glb')

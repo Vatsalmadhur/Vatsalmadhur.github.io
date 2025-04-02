@@ -18,7 +18,6 @@ function Name() {
   const h2ref = useRef(null);
   const line = CSSRulePlugin.getRule("#content::before");
 
-  // Optimize resize handling
   const [isDesktop, setIsDesktop] = useState(window.innerWidth > 480);
 
   useEffect(() => {
@@ -38,6 +37,7 @@ function Name() {
       gsap.to([h1ref.current, h2ref.current], {
         duration: 1,
         y: 10,
+        // opacity:1,
         clipPath: "polygon(0 2%, 100% 1%, 100% 100%, 0% 100%)",
         stagger: 0.2,
       });
