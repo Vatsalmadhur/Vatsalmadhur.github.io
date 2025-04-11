@@ -1,18 +1,19 @@
-import React, { useRef, } from "react";
+import React, { useEffect, useRef, useState, } from "react";
 import { Canvas } from "@react-three/fiber";
-import {  OrbitControls} from "@react-three/drei";
+import {  Loader, OrbitControls} from "@react-three/drei";
 import "./Contact.css";
 import gsap from "gsap";
 import Form from '../Form/Form'
 import { Heading } from "../Heading/Heading";
 import Phone from "../Phone/Phone";
 import { useGSAP } from "@gsap/react";
+import Loading from "../Loader/Loading";
 const Lights = React.lazy(()=> import('../Phone/Lights'))
 
 function contact() {
 
   const textRef = useRef(null);
-
+const [loading,setLoading]=useState(true);
   const tl = new gsap.timeline();
   useGSAP(() => {
     tl.from(textRef.current, {
@@ -24,6 +25,13 @@ function contact() {
     return () => tl.kill();
   }, []);
 
+  useEffect(()=>{
+    const delay = setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+
+    return ()=> clearTimeout(delay);
+  })
   return (
     <>
         <div className="mainBoxOfContact">
@@ -39,7 +47,8 @@ function contact() {
             </div>
           </div>
 
-          <div className="canvasDivOfContact">
+          <div className="canvasDivOfContact"> {loading ? (<Loading/>):
+          (
             <Canvas gl={{ powerPreference: "high-performance", antialias: true }}  >
               <Lights />
               <OrbitControls
@@ -52,6 +61,7 @@ function contact() {
 
             <Phone scale={[35, 35, 35]} />
             </Canvas>
+          )}
           </div>
         </div>
     </>
