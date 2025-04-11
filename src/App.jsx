@@ -32,13 +32,12 @@ function App() {
                 <Route exact path="/about" element={<About />} />
                 <Route exact path="/skills" element={<Skills />} />
                 <Route exact path="/project" element={<Project />} />
-                <Route exact path="/contact" element={<Contact />} />
-
               </Routes>
             </Suspense>
 
           }
 />
+<Route exact path="/contact" element={<Contact />} />
 
       </Routes>
     </>
