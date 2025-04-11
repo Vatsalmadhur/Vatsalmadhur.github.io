@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { Suspense, useState } from "react";
 import "./About.css";
 import { Canvas } from "@react-three/fiber";
 import { useEffect } from "react";
@@ -43,8 +43,9 @@ function About() {
           </p>
         </div>
         <div className="head_abt_2">
-          {loading ? (<Loading/>)
-          : (
+          {/* {loading ? (<Loading/>)
+          : ( */}
+          {/* <Suspense fallback={<Loading/>}> */}
           <Canvas
             className="canvas2"
             color="black"
@@ -53,7 +54,8 @@ function About() {
             <Info/>
             <OrbitControls enablePan={false} enableZoom={false} rotateSpeed={0.1}/>
           </Canvas>
-          )}
+          {/* </Suspense> */}
+          {/* )} */}
         </div>
       </div>
     </>
