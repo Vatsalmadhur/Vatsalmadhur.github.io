@@ -1,14 +1,15 @@
-import React, { useEffect, useRef, useState, } from "react";
+import React, { Suspense, useEffect, useRef, useState, } from "react";
 import { Canvas } from "@react-three/fiber";
 import {  Loader, OrbitControls} from "@react-three/drei";
 import "./Contact.css";
 import gsap from "gsap";
 import Form from '../Form/Form'
 import { Heading } from "../Heading/Heading";
-import Phone from "../Phone/Phone";
+// import Phone from "../Phone/Phone";
 import { useGSAP } from "@gsap/react";
 import Loading from "../Loader/Loading";
 const Lights = React.lazy(()=> import('../Phone/Lights'))
+const Phone = React.lazy(()=> import('../Phone/Phone'))
 
 function contact() {
 
@@ -47,8 +48,10 @@ const [loading,setLoading]=useState(true);
             </div>
           </div>
 
-          <div className="canvasDivOfContact"> {loading ? (<Loading/>):
-          (
+          <div className="canvasDivOfContact">
+          {/* {loading ? (<Loading/>):
+          ( */}
+            <Suspense fallback={<Loading/>}>
             <Canvas gl={{ powerPreference: "high-performance", antialias: true }}  >
               <Lights />
               <OrbitControls
@@ -61,7 +64,8 @@ const [loading,setLoading]=useState(true);
 
             <Phone scale={[35, 35, 35]} />
             </Canvas>
-          )}
+            </Suspense>
+          {/* // )} */}
           </div>
         </div>
     </>
