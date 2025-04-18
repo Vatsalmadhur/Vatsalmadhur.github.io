@@ -43,19 +43,9 @@ function About() {
           </p>
         </div>
         <div className="head_abt_2">
-          {/* {loading ? (<Loading/>)
-          : ( */}
-          {/* <Suspense fallback={<Loading/>}> */}
-          <Canvas
-            className="canvas2"
-            color="black"
-          >
-            <OrthographicCamera makeDefault position={[0,10,35]} zoom={25} />
-            <Info/>
-            <OrbitControls enablePan={false} enableZoom={false} rotateSpeed={0.1}/>
-          </Canvas>
-          {/* </Suspense> */}
-          {/* )} */}
+      <div className="myImgWrapper">
+      <img src="/myImg3.webp" alt="my pic" className="myImg" />
+        </div>
         </div>
       </div>
     </>
