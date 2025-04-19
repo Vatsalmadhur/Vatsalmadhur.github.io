@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Skills.css"
 import Navbar from "../Navbar/Navbar"
 import gsap from "gsap";
@@ -6,12 +6,21 @@ import { useRef } from "react";
 import { useEffect } from "react";
 import Cursor from "../Cursor/Cursor";
 import { Heading } from "../Heading/Heading";
+import { useGSAP } from "@gsap/react";
+import Pageswitch from "../Loader/Pageswitch";
 function Skills(){
+    const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => setLoading(false), 2000);
+    return () => clearTimeout(timeout);
+  }, []);
     let skillH1 =useRef(null);
     let skillH2 =useRef(null);
     const tl = new gsap.timeline();
 
-    useEffect(()=>{
+    useGSAP(()=>{
+        if(!loading){
         tl.from([skillH2],1,{
           opacity:0,
           x:100,
@@ -22,7 +31,7 @@ function Skills(){
 
         })
 
-        tl.from([".skill1",".skill2",".skill3",".skill4",".skill5",".skill6",".skill7",".skill8",".skill9",".skill10",".skill11",".skill12",".skill13",".skill14",".skill15",".skill16",".skill17",".skill18",".skill19",".skill20",".skill21"],{
+        tl.from([".skill1",".skill2",".skill3",".skill4",".skill5",".skill6",".skill7",".skill8",".skill9",".skill10",".skill11",".skill12",".skill13",".skill14",".skill15",".skill16",".skill17",".skill18",".skill19"],{
             opacity:0,
             y:-1000,
         stagger:{
@@ -30,14 +39,16 @@ function Skills(){
         }
 
           })
-
-      })
+        }
+      },[loading])
 
 
     return(
         <>
         <Navbar/>
         {/* <Cursor/> */}
+        {loading ? (<Pageswitch/>):
+        (
         <div className="bodyOfSkills">
         <div className="leftOfSkills">
             <div className="leftWrap">
@@ -50,7 +61,7 @@ function Skills(){
                 <div className="skill1" >Html</div>
                 <div className="skill2" >CSS</div>
                 <div className="skill3" >SASS</div>
-                <div className="skill4">Js</div>
+                <div className="skill4">JavaScript</div>
                 <div className="skill5">ReactJs</div>
                 <div className="skill6">NextJs</div>
                 <div className="skill7">React-Three-Fiber</div>
@@ -64,15 +75,14 @@ function Skills(){
                 <div className="skill15">MongoDB</div>
                 <div className="skill16">Java</div>
                 <div className="skill17">C</div>
-                <div className="skill18">Kotlin</div>
-                <div className="skill19">Android</div>
-                <div className="skill20">Git</div>
-                <div className="skill21">AngularJS</div>
+                <div className="skill18">Git</div>
+                <div className="skill19">AngularJS</div>
 
 
             </div>
         </div>
         </div>
+        )}
 
         </>
 

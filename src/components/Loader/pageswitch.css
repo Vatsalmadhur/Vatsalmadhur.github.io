@@ -1,0 +1,11 @@
+.pageBody{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--grey);
+    display: flex;
+}
+.bar{
+    width: 20%;
+    height: 100%;
+    background-color:var(--orange);
+}

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./Project.css";
 import Button from "../Button/Button";
 import Card from "../Card/Card";
@@ -6,8 +6,16 @@ import Navbar from "../Navbar/Navbar";
 import { gsap,Power3 } from "gsap";
 import Cursor from "../Cursor/Cursor";
 import { Heading } from "../Heading/Heading";
+import { useGSAP } from "@gsap/react";
+import Pageswitch from "../Loader/Pageswitch";
 
 function project() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => setLoading(false), 2000);
+    return () => clearTimeout(timeout);
+  }, []);
   const tl= new gsap.timeline();
   const ease = Power3.easeOut();
 
@@ -19,7 +27,8 @@ let card1=useRef(null);
 let card2=useRef(null);
 let card3=useRef(null);
 
-useEffect(()=>{
+useGSAP(()=>{
+  if(!loading){
   tl.from([para,button],1,{
     opacity:0,
     x:100,
@@ -64,13 +73,15 @@ useEffect(()=>{
     scale:1.6,
     ease:ease,
   },"-=1")
+}
 
-})
+},[loading])
 
   return (
     <>
       {/* <Navbar /> */}
       {/* <Cursor/> */}
+      {loading ? (<Pageswitch/>):(
       <div className="bodyOfProject">
         <div className="mainOfProject">
           <div className="leftProject">
@@ -98,6 +109,7 @@ useEffect(()=>{
           </div>
         </div>
       </div>
+      )}
     </>
   );
 }
