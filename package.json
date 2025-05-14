@@ -21,6 +21,8 @@
     "@mui/material": "^5.11.10",
     "@react-three/cannon": "^6.5.2",
     "@react-three/drei": "^9.57.3",
+    "@sentry/react": "^9.18.0",
+    "@sentry/vite-plugin": "^3.4.0",
     "@splinetool/loader": "^1.0.91",
     "@splinetool/r3f-spline": "^1.0.2",
     "@splinetool/react-spline": "^2.2.6",
